@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenClaw 快速登录</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: left;
+            border-left: 4px solid #2196F3;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .msg {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .loading {
+            color: #666;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>🚀 OpenClaw 快速登录</h1>
+
+        <div class="info">
+            <strong>预填账户：</strong><br>
+            用户名：admin<br>
+            密码：admin123<br><br>
+            <em>点击下方按钮即可直接登录</em>
+        </div>
+
+        <button id="loginBtn" onclick="quickLogin()">一键登录</button>
+
+        <div class="loading" id="loading">正在登录，请稍候...</div>
+
+        <div class="msg" id="message"></div>
+    </div>
+
+    <script>
+        function quickLogin() {
+            var btn = document.getElementById('loginBtn');
+            var msgDiv = document.getElementById('message');
+            var loading = document.getElementById('loading');
+
+            // 使用预填的正确账户
+            var username = 'admin';
+            var password = 'admin123';
+
+            console.log('快速登录');
+            console.log('用户名:', username);
+            console.log('密码:', password);
+
+            // 禁用按钮，显示加载
+            btn.disabled = true;
+            loading.style.display = 'block';
+            msgDiv.style.display = 'none';
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/api/auth/login', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onreadystatechange = function() {
+                console.log('状态:', xhr.readyState);
+                console.log('状态码:', xhr.status);
+
+                if (xhr.readyState === 4) {
+                    loading.style.display = 'none';
+                    btn.disabled = false;
+                    msgDiv.style.display = 'block';
+
+                    if (xhr.status === 200) {
+                        try {
+                            var response = JSON.parse(xhr.responseText);
+                            console.log('响应:', response);
+
+                            if (response.success) {
+                                msgDiv.className = 'msg success';
+                                msgDiv.innerHTML =
+                                    '<strong>✅ 登录成功！</strong><br><br>' +
+                                    '用户：' + response.user.username + '<br>' +
+                                    '角色：' + response.user.role + '<br>' +
+                                    'Token：' + response.token.substring(0, 20) + '...';
+                                alert('登录成功！欢迎 ' + response.user.username);
+                            } else {
+                                msgDiv.className = 'msg error';
+                                msgDiv.innerHTML =
+                                    '<strong>❌ 登录失败</strong><br><br>' +
+                                    '原因：' + response.message;
+                            }
+                        } catch (e) {
+                            msgDiv.className = 'msg error';
+                            msgDiv.innerHTML = '服务器返回数据错误';
+                            console.error('解析错误:', e);
+                        }
+                    } else {
+                        msgDiv.className = 'msg error';
+                        msgDiv.innerHTML = '请求失败，状态码：' + xhr.status;
+                    }
+                }
+            };
+
+            xhr.onerror = function() {
+                loading.style.display = 'none';
+                btn.disabled = false;
+                msgDiv.style.display = 'block';
+                msgDiv.className = 'msg error';
+                msgDiv.innerHTML = '网络错误，请检查连接';
+                console.error('网络错误');
+            };
+
+            try {
+                var data = {
+                    username: username,
+                    password: password
+                };
+                console.log('发送数据:', data);
+                xhr.send(JSON.stringify(data));
+            } catch (e) {
+                loading.style.display = 'none';
+                btn.disabled = false;
+                msgDiv.style.display = 'block';
+                msgDiv.className = 'msg error';
+                msgDiv.innerHTML = '发送请求失败：' + e.message;
+                console.error('发送错误:', e);
+            }
+        }
+
+        // 页面加载完成
+        window.onload = function() {
+            console.log('页面加载完成');
+            console.log('当前URL:', window.location.href);
+
+            // 测试服务器连接
+            var testXhr = new XMLHttpRequest();
+            testXhr.open('GET', '/', true);
+            testXhr.onreadystatechange = function() {
+                if (testXhr.readyState === 4 && testXhr.status !== 200) {
+                    var msgDiv = document.getElementById('message');
+                    msgDiv.className = 'msg error';
+                    msgDiv.style.display = 'block';
+                    msgDiv.innerHTML = '无法连接服务器，请确保服务器正在运行';
+                }
+            };
+            testXhr.send();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+  File "/root/.openclaw/workspace/unified-quant-platform/ultimate_integrated_app.py", line 377
+    HTML_TEMPLATE = """
+                    ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 1050)

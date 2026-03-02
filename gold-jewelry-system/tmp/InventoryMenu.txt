@@ -1,0 +1,14 @@
+        <el-sub-menu index="inventory">
+          <template #title>
+            <el-icon><Goods /></el-icon>
+            <span>库存管理</span>
+          </template>
+          <el-menu-item index="/inventory">
+            <el-icon><List /></el-icon>
+            <span>库存列表</span>
+          </el-menu-item>
+          <el-menu-item index="/stocktake">
+            <el-icon><Notebook /></el-icon>
+            <span>库存盘点</span>
+          </el-menu-item>
+        </el-sub-menu>

@@ -1,0 +1,44 @@
+🔄 开始更新数据...
+⚠️ 数据更新失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+🔄 开始更新数据...
+✅ 后台更新线程已启动，更新间隔: 300秒
+
+======================================================================
+🚀 OpenClaw 统一量化交易平台 v5.1 - 带数据缓存版本
+======================================================================
+
+✅ 特性:
+  • 本地数据缓存（避免频繁网络请求）
+  • 后台自动更新（每5分钟）
+  • 快速响应（毫秒级）
+  • 真实A股数据
+
+💡 数据源:
+  • AKShare（主数据源）
+  • 本地缓存（加速访问）
+
+======================================================================
+
+🌐 应用启动中...
+访问地址: http://localhost:7000
+默认账户: admin / admin123
+
+⚠️  首次启动需要加载数据，请耐心等待...
+======================================================================
+    
+ * Serving Flask app 'cached_data_app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://10.3.0.5:7000
+Press CTRL+C to quit
+127.0.0.1 - - [02/Mar/2026 17:36:51] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [02/Mar/2026 17:38:10] "GET /health HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 17:59:12] "GET / HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 17:59:14] "GET /api/realtime/600000 HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 17:59:24] "GET /api/realtime/002496 HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 17:59:29] "GET /api/market HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 17:59:42] "GET / HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 17:59:43] "GET /api/realtime/600000 HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 17:59:50] "GET /api/realtime/002496 HTTP/1.1" 200 -

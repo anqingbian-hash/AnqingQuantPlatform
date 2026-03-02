@@ -1,0 +1,58 @@
+# Skill Orchestrator 配置文件
+# 放置于项目根目录的 .claude/ 目录下
+
+orchestrator:
+  # 是否自动调用技能
+  auto_invoke: true
+
+  # 自动调用的置信度阈值 (0.0-1.0)
+  # 高于此值自动调用，低于此值询问用户
+  confidence_threshold: 0.7
+
+  # 是否允许用户跳过技能流程
+  allow_skip: true
+
+  # 是否显示详细日志
+  verbose: false
+
+  # 默认工作模式
+  # - strict: 严格遵循技能流程
+  # - balanced: 平衡规范与效率（推荐）
+  # - fast: 优先效率，仅在必要时调用技能
+  mode: balanced
+
+# 技能优先级配置（可自定义）
+skill_priority:
+  process_skills:
+    - brainstorming
+    - debugging
+    - systematic-debugging
+
+  execution_skills:
+    - test-driven-development
+    - code-review
+    - documentation
+
+  domain_skills:
+    - frontend-design
+    - mcp-builder
+    - api-design
+
+# 平台特定配置
+platforms:
+  claude-code:
+    skill_tool: Skill
+    skill_directory: ~/.claude/skills/
+
+  opencode:
+    skill_directory: ~/.opencode/skills/
+
+# 跳过技能的场景关键词
+skip_keywords:
+  - 快速
+  - 跳过
+  - 直接
+  - 简单
+  - just
+  - quickly
+  - skip

@@ -1,0 +1,53 @@
+# 配置文件 - 测试环境
+
+# 环境标识
+environment: test
+
+# 安全配置
+security:
+  secret_key: your-secret-key-change-in-production
+  jwt_secret: jwt-secret-key-change-in-production
+  password_hash_algorithm: pbkdf2:sha256
+
+# 数据库配置（测试环境使用 SQLite）
+database:
+  type: sqlite
+  url: sqlite:///data/test/quant_test.db
+
+# 日志配置
+logs:
+  dir: logs
+  level: DEBUG
+
+# API 配置
+api:
+  host: 0.0.0.0
+  port: 5000
+  debug: true
+
+# JWT 配置
+jwt:
+  algorithm: HS256
+  expire_hours: 24
+
+# 数据源配置
+data_sources:
+  akshare:
+    enabled: true
+    timeout: 30
+  efinance:
+    enabled: true
+    timeout: 30
+  tushare:
+    enabled: false
+  baostock:
+    enabled: true
+    timeout: 30
+
+# 邮件通知配置
+email:
+  enabled: false
+  smtp_server: smtp.qq.com
+  smtp_port: 587
+  sender: test@ntdf.com
+  password: test_password

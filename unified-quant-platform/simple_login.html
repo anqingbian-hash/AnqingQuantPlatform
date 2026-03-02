@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简化登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #495057;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .result.show {
+            display: block;
+        }
+
+        .success {
+            background: #d4edda;
+            border: 2px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .error {
+            background: #f8d7da;
+            border: 2px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .info {
+            background: #e7f3ff;
+            border: 2px solid #b3d7ff;
+            color: #004085;
+        }
+
+        .loading {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .loading::after {
+            content: '正在登录...';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.5; }
+        }
+
+        .user-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .user-info.show {
+            display: block;
+        }
+
+        .user-info h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .user-info p {
+            margin: 5px 0;
+            color: #495057;
+        }
+
+        .btn-logout {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            margin-top: 15px;
+        }
+
+        .btn-logout:hover {
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-dashboard {
+            background: linear-gradient(135deg, #51cf66 0%, #40c057 100%);
+            margin-top: 10px;
+        }
+
+        .btn-dashboard:hover {
+            box-shadow: 0 5px 20px rgba(81, 207, 102, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>🔐 用户登录</h1>
+
+        <div id="loginForm">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" id="username" placeholder="请输入用户名" value="admin">
+            </div>
+
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" placeholder="请输入密码" value="admin123">
+            </div>
+
+            <button onclick="handleLogin()" id="loginBtn">登录</button>
+
+            <div class="loading" id="loading"></div>
+            <div class="result" id="result"></div>
+        </div>
+
+        <div class="user-info" id="userInfo">
+            <h3>✅ 已登录</h3>
+            <p><strong>用户名：</strong><span id="displayUsername"></span></p>
+            <p><strong>邮箱：</strong><span id="displayEmail"></span></p>
+            <p><strong>角色：</strong><span id="displayRole"></span></p>
+            <p><strong>Token：</strong><span id="displayToken" style="font-size: 12px;"></span></p>
+            <button class="btn-dashboard" onclick="goToDashboard()">进入主系统</button>
+            <button class="btn-logout" onclick="handleLogout()">退出登录</button>
+        </div>
+    </div>
+
+    <script>
+        // 页面加载时检查登录状态
+        window.addEventListener('DOMContentLoaded', function() {
+            checkLoginStatus();
+        });
+
+        function checkLoginStatus() {
+            const token = localStorage.getItem('token');
+            const user = localStorage.getItem('user');
+
+            if (token && user) {
+                // 已登录
+                const userData = JSON.parse(user);
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('userInfo').classList.add('show');
+                document.getElementById('displayUsername').textContent = userData.username;
+                document.getElementById('displayEmail').textContent = userData.email;
+                document.getElementById('displayRole').textContent = userData.role;
+                document.getElementById('displayToken').textContent = token.substring(0, 30) + '...';
+            } else {
+                // 未登录
+                document.getElementById('loginForm').style.display = 'block';
+                document.getElementById('userInfo').classList.remove('show');
+            }
+        }
+
+        function handleLogin() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            console.log('开始登录...');
+            console.log('用户名:', username);
+            console.log('密码长度:', password.length);
+
+            if (!username || !password) {
+                showResult('error', '请输入用户名和密码！');
+                return;
+            }
+
+            // 显示加载中
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('result').classList.remove('show');
+            document.getElementById('loginBtn').disabled = true;
+
+            const requestData = {
+                username: username,
+                password: password
+            };
+
+            console.log('请求数据:', JSON.stringify(requestData));
+
+            fetch('/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestData)
+            })
+            .then(response => {
+                console.log('响应状态:', response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('响应数据:', data);
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('loginBtn').disabled = false;
+
+                if (data.success) {
+                    // 保存到 localStorage
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+
+                    showResult('success', '登录成功！正在跳转...');
+
+                    // 更新UI
+                    setTimeout(function() {
+                        checkLoginStatus();
+                    }, 500);
+                } else {
+                    showResult('error', data.message || '登录失败，请检查用户名和密码');
+                }
+            })
+            .catch(error => {
+                console.error('登录错误:', error);
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('loginBtn').disabled = false;
+                showResult('error', '请求失败: ' + error.message);
+            });
+        }
+
+        function handleLogout() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            showResult('info', '已退出登录');
+            setTimeout(function() {
+                checkLoginStatus();
+            }, 500);
+        }
+
+        function goToDashboard() {
+            window.location.href = '/';
+        }
+
+        function showResult(type, message) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.className = 'result show ' + type;
+            resultDiv.innerHTML = `<p><strong>${type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️'} ${message}</strong></p>`;
+
+            // 3秒后自动隐藏
+            if (type === 'success' || type === 'info') {
+                setTimeout(function() {
+                    resultDiv.classList.remove('show');
+                }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

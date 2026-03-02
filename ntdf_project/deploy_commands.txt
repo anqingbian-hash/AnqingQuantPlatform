@@ -1,0 +1,161 @@
+=== NTDF 系统部署命令 ===
+# 复制以下命令到腾讯云WebShell中执行
+
+# 第1步：创建项目目录
+sudo mkdir -p /var/www/ntdf/backend
+sudo mkdir -p /var/www/ntdf/frontend
+sudo chown -R ubuntu:ubuntu /var/www/ntdf
+echo "目录创建完成"
+
+# 第2步：创建Python虚拟环境并安装依赖
+cd /var/www/ntdf/backend
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip -q
+pip install fastapi uvicorn[standard] sqlalchemy psycopg2-binary pandas numpy requests yfinance -q
+echo "后端依赖安装完成"
+
+# 第3步：创建FastAPI主文件
+cat > /var/www/ntdf/backend/main.py << 'PYEOF'
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+import uvicorn
+
+app = FastAPI(title="NTDF Digital Net Analysis API", version="1.0.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/api/health")
+async def health_check():
+    return {
+        "status": "healthy",
+        "timestamp": "2026-02-22 12:30:00",
+        "version": "1.0.0",
+        "services": {
+            "alpha_vantage": "available",
+            "yahoo_finance": "available"
+        }
+    }
+
+@app.get("/api/alpha_vantage/quote")
+async def get_alpha_vantage_quote():
+    import requests
+    ALPHA_VANTAGE_API_KEY = "X9GC2MV7P1GCODRZ"
+    ALPHA_VANTAGE_BASE_URL = "https://www.alphavantage.co/query"
+    
+    try:
+        params = {
+            "function": "GLOBAL_QUOTE",
+            "symbol": "AAPL",
+            "apikey": ALPHA_VANTAGE_API_KEY
+        }
+        response = requests.get(ALPHA_VANTAGE_BASE_URL, params=params, timeout=10)
+        response.raise_for_status()
+        
+        data = response.json()
+        return {
+            "success": True,
+            "data": data
+        }
+    except Exception as e:
+        return {
+            "success": False,
+            "error": str(e)
+        }
+
+@app.get("/api/yahoo/quote")
+async def get_yahoo_quote():
+    import yfinance as yf
+    try:
+        ticker = yf.Ticker("AAPL")
+        hist = ticker.history(period="1d")
+        if not hist.empty:
+            latest = hist.iloc[-1]
+            return {
+                "success": True,
+                "symbol": "AAPL",
+                "company_name": ticker.info.get("longName", ""),
+                "current_price": float(latest['Close']),
+                "open": float(latest['Open']),
+                "high": float(latest['High']),
+                "lown": float(latest['Low']),
+                "volume": int(latest['Volume'])
+            }
+        else:
+            return {"success": False, "error": "No data available"}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+@app.get("/")
+async def root():
+    return {
+        "message": "NTDF Digital Net Analysis API",
+        "version": "1.0.0",
+        "docs": "/docs",
+        "health": "/api/health"
+    }
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+PYEOF
+
+echo "后端代码创建完成"
+
+# 第4步：配置Nginx
+sudo bash -c 'cat > /etc/nginx/sites-available/ntdf << "EOF"
+server {
+    listen 80;
+    server_name 122.51.142.248;
+    
+    root /var/www/ntdf/frontend/dist;
+    index index.html;
+    
+    client_max_body_size 10M;
+    
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+    
+    location /api {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+EOF'
+
+sudo ln -sf /etc/nginx/sites-available/ntdf /etc/nginx/sites-enabled/
+sudo rm -f /etc/nginx/sites-enabled/default
+sudo nginx -t
+sudo systemctl restart nginx
+
+echo "Nginx配置完成"
+
+# 第5步：启动后端服务
+cd /var/www/ntdf/backend
+nohup bash -c 'source venv/bin/activate && uvicorn main:app --host 0.0.0.0 --port 8000' > /var/www/ntdf/backend/server.log 2>&1 &
+
+sleep 3
+
+echo ""
+echo "=== 部署完成 ==="
+echo "服务信息："
+echo "  - 服务器: http://122.51.142.248"
+echo "  - 后端 API: http://122.51.142.248:8000"
+echo "  - 健康检查: http://122.51.142.248:8000/api/health"
+echo ""
+echo "日志文件："
+echo "  - 后端日志: /var/www/ntdf/backend/server.log"
+echo ""
+echo "下一步："
+echo "  1. 测试API接口"
+echo "  2. 创建前端项目"
+echo "  - 实现数据可视化"

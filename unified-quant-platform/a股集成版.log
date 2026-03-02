@@ -1,0 +1,38 @@
+
+======================================================================
+🚀 OpenClaw 统一量化交易平台 v5.4 - A股实盘数据
+======================================================================
+
+✅ 特性:
+  • 直接对接AKShare实盘数据
+  • 无缓存，实时获取
+  • 真实A股市场数据
+  • 每次查询都是最新数据
+
+💡 数据源:
+  • AKShare（免费，无需Token）
+  • 实盘数据，真实可靠
+
+⚠️  注意:
+  • 每次查询需要网络请求
+  • 响应时间取决于网络速度
+  • 数据来源：东方财富
+
+======================================================================
+
+🌐 应用启动中...
+访问地址: http://localhost:7000
+默认账户: admin / admin123
+
+======================================================================
+    
+ * Serving Flask app 'live_market_app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://10.3.0.5:7000
+Press CTRL+C to quit
+127.0.0.1 - - [02/Mar/2026 19:10:15] "GET /health HTTP/1.1" 200 -
+49.90.80.101 - - [02/Mar/2026 19:11:29] "GET / HTTP/1.1" 200 -
+49.90.80.101 - - [02/Mar/2026 19:11:50] "GET / HTTP/1.1" 200 -

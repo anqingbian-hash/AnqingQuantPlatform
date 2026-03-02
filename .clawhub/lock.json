@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1770803375381
+    },
+    "video-frames": {
+      "version": "1.0.0",
+      "installedAt": 1771657814837
+    },
+    "vision-sandbox": {
+      "version": "1.1.0",
+      "installedAt": 1771659001839
+    }
+  }
+}

@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: ntdf_postgres
+    environment:
+      POSTGRES_USER: ntdf_user
+      POSTGRES_PASSWORD: ntdf_password_2024
+      POSTGRES_DB: ntdf
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+  ntdf_backend:
+    build: ./backend
+    container_name: ntdf_api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL: postgresql+psycopg2://ntdf_user:ntdf_password_2024@postgres:5432/5432/ntdf
+      - ALPHA_VANTAGE_API_KEY: X9GC2MV7P1GCODRZ
+    depends_on:
+      - postgres
+    volumes:
+      - ./backend:/app
+      - ./data:/app/data
+    restart: always
+
+  ntdf_frontend:
+    build: ./frontend
+    container_name: ntdf_web
+    ports:
+      - "80:80"
+    depends_on:
+      - ntdf_backend
+    volumes:
+      - ./frontend:/app
+    restart: always
+
+volumes:
+  postgres_data:
+
+networks:
+  default:
+    driver: bridge

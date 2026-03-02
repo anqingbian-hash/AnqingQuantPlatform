@@ -1,0 +1,28 @@
+======================================================================
+🚀 OpenClaw 统一量化交易平台 v5.0 - 网页版
+======================================================================
+✅ 应用启动成功
+
+🌐 测试环境启动
+======================================================================
+访问地址: http://localhost:7000
+默认账户: admin / admin123
+======================================================================
+ * Serving Flask app 'web_app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://10.3.0.5:7000
+Press CTRL+C to quit
+127.0.0.1 - - [02/Mar/2026 16:46:28] "GET / HTTP/1.1" 200 -
+43.160.233.168 - - [02/Mar/2026 16:46:33] "GET / HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 16:47:46] "GET / HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 16:47:47] "GET /favicon.ico HTTP/1.1" 404 -
+66.11.117.85 - - [02/Mar/2026 16:47:54] "POST /api/auth/login HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 16:48:08] "GET /api/analysis/realtime/002496 HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 16:48:28] "GET /api/analysis/chip/002496 HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 16:48:40] "GET /api/analysis/market HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 16:49:02] "GET /api/analysis/realtime/002496 HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 16:54:40] "GET / HTTP/1.1" 200 -
+66.11.117.85 - - [02/Mar/2026 16:54:50] "POST /api/auth/login HTTP/1.1" 200 -

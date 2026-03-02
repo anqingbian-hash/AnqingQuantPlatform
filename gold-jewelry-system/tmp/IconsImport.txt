@@ -1,0 +1,12 @@
+import {
+  HomeFilled,
+  Box,
+  List,
+  Plus,
+  Goods,
+  Notebook,
+  ShoppingCart,
+  User,
+  ArrowDown,
+  Shop
+} from '@element-plus/icons-vue'

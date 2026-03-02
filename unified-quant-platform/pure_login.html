@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纯HTML登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #495057;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e7f3ff;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #004085;
+        }
+
+        .info h3 {
+            margin-bottom: 10px;
+            color: #667eea;
+            font-size: 16px;
+        }
+
+        .success {
+            margin-top: 20px;
+            padding: 20px;
+            background: #d4edda;
+            border: 2px solid #c3e6cb;
+            border-radius: 8px;
+            color: #155724;
+        }
+
+        .success h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .success p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .success a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .success a:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8d7da;
+            border: 2px solid #f5c6cb;
+            border-radius: 8px;
+            color: #721c24;
+        }
+
+        .error h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        {% if error %}
+        <div class="error">
+            <h3>❌ {{ error }}</h3>
+            <p>请检查用户名和密码后重试</p>
+        </div>
+        {% endif %}
+
+        {% if success %}
+        <div class="success">
+            <h3>✅ 登录成功！</h3>
+            <p><strong>用户名：</strong>{{ user.username }}</p>
+            <p><strong>邮箱：</strong>{{ user.email }}</p>
+            <p><strong>角色：</strong>{{ user.role }}</p>
+            <p><strong>Token：</strong>{{ token }}</p>
+            <p style="margin-top: 15px;">
+                <a href="/">🎯 进入主系统</a>
+            </p>
+        </div>
+        {% else %}
+        <h1>🔐 用户登录</h1>
+
+        <form method="POST" action="/login-submit">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" id="username" name="username" placeholder="请输入用户名" value="admin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" name="password" placeholder="请输入密码" value="admin123" required>
+            </div>
+
+            <button type="submit">登录</button>
+        </form>
+
+        <div class="info">
+            <h3>📋 登录信息</h3>
+            <p><strong>用户名：</strong>admin</p>
+            <p><strong>密码：</strong>admin123</p>
+            <p style="margin-top: 10px; color: #666;">这是纯HTML表单提交，不需要JavaScript</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

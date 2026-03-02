@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #5568d3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background: #f0f0f0;
+            display: none;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        pre {
+            background: white;
+            padding: 10px;
+            border-radius: 3px;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔐 登录测试</h1>
+    <p>测试地址: http://10.3.0.5:7000</p>
+
+    <div class="form-group">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" value="admin">
+    </div>
+
+    <div class="form-group">
+        <label for="password">密码:</label>
+        <input type="password" id="password" value="admin123">
+    </div>
+
+    <button onclick="testLogin()">测试登录</button>
+
+    <div id="result" class="result"></div>
+
+    <div style="margin-top: 30px;">
+        <h3>测试步骤:</h3>
+        <ol>
+            <li>点击"测试登录"按钮</li>
+            <li>查看返回结果</li>
+            <li>检查 localStorage 中是否保存了 token 和用户信息</li>
+            <li>如果成功，token 会显示在结果中</li>
+        </ol>
+    </div>
+
+    <script>
+        function testLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            console.log('测试登录...');
+            console.log('用户名:', username);
+            console.log('密码长度:', password.length);
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result';
+            resultDiv.innerHTML = '<p>正在登录...</p>';
+
+            fetch('/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => {
+                console.log('响应状态:', response.status);
+                return response.json();
+            })
+            .then(data => {
+                console.log('响应数据:', data);
+
+                if (data.success) {
+                    // 保存到 localStorage
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+
+                    resultDiv.className = 'result success';
+                    resultDiv.innerHTML = `
+                        <h3>✅ 登录成功！</h3>
+                        <p><strong>用户名:</strong> ${data.user.username}</p>
+                        <p><strong>邮箱:</strong> ${data.user.email}</p>
+                        <p><strong>角色:</strong> ${data.user.role}</p>
+                        <p><strong>Token:</strong> ${data.token}</p>
+                        <pre>完整响应:\n${JSON.stringify(data, null, 2)}</pre>
+                        <p style="margin-top: 10px; font-size: 12px; color: #666;">
+                            ✅ Token 已保存到 localStorage<br>
+                            ✅ 用户信息已保存到 localStorage
+                        </p>
+                    `;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.innerHTML = `
+                        <h3>❌ 登录失败</h3>
+                        <p><strong>错误信息:</strong> ${data.message}</p>
+                        <p>请检查用户名和密码</p>
+                    `;
+                }
+            })
+            .catch(error => {
+                console.error('登录错误:', error);
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `
+                    <h3>❌ 请求错误</h3>
+                    <p><strong>错误信息:</strong> ${error.message}</p>
+                    <p>请检查网络连接或服务器是否运行</p>
+                `;
+            });
+        }
+
+        // 页面加载时检查 localStorage
+        window.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('token');
+            const user = localStorage.getItem('user');
+
+            if (token && user) {
+                const resultDiv = document.getElementById('result');
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'result success';
+                resultDiv.innerHTML = `
+                    <h3>✅ 已登录状态</h3>
+                    <p><strong>用户:</strong> ${JSON.parse(user).username}</p>
+                    <p><strong>Token:</strong> ${token.substring(0, 20)}...</p>
+                    <button onclick="clearStorage()" style="background: #ff6b6b; margin-top: 10px;">清除登录状态</button>
+                `;
+            }
+        });
+
+        function clearStorage() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            location.reload();
+        }
+    </script>
+</body>
+</html>

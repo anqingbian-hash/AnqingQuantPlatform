@@ -1,0 +1,121 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  application:
+    name: gold-jewelry-management-system
+
+  # 数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/gold_jewelry?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  # JPA 配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+        use_sql_comments: true
+    open-in-view: false
+
+  # Redis 配置
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+      database: 0
+      timeout: 3000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-wait: -1ms
+          max-idle: 8
+          min-idle: 0
+
+  # RabbitMQ 配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 1
+
+  # 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+
+# JWT 配置
+jwt:
+  secret: gold-jewelry-management-system-secret-key-2024-very-long-secret
+  expiration: 86400000  # 24 小时（毫秒）
+  header: Authorization
+  prefix: Bearer
+
+# 金价接口配置
+gold-price:
+  enabled: true
+  sources:
+    - name: shanghai-gold-exchange
+      url: https://www.sge.com.cn/
+    - name: backup-source-1
+      url: https://example.com/gold-price
+  cache-duration: 3600000  # 1 小时缓存（毫秒）
+
+# 日志配置
+logging:
+  level:
+    root: INFO
+    com.goldjewelry: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+  file:
+    name: logs/gold-jewelry-system.log
+    max-size: 10MB
+    max-history: 30
+
+# 应用配置
+app:
+  name: 黄金白银贵金属首饰管理系统
+  version: 1.0.0
+  description: 专为中小型珠宝零售企业打造的智能化 SaaS 系统
+
+# 权限配置
+security:
+  enable-cors: true
+  csrf:
+    enabled: false
+  # 白名单（无需认证的接口）
+  whitelist:
+    - /api/v1/auth/login
+    - /api/v1/auth/register
+    - /api/v1/public/**
+    - /swagger-ui/**
+    - /v3/api-docs/**
