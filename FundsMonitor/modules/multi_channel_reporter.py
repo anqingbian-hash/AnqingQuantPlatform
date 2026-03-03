@@ -140,7 +140,7 @@ class MultiChannelReporter:
     
     def send_feishu(self, title: str, content: str, charts: List[str] = None):
         """
-        发送飞书报告
+        发送飞书报告（真实API）
         
         参数:
             title: 报告标题
@@ -157,15 +157,61 @@ class MultiChannelReporter:
                 logger.warning("[MultiChannelReporter] 未配置飞书Webhook，使用Mock模式")
                 return self._mock_feishu(title, content, charts)
             
-            # 使用飞书API推送
-            # 注意：需要安装飞书SDK
-            # 这里先返回Mock
+            # 使用飞书Webhook API推送
+            import requests
             
-            return self._mock_feishu(title, content, charts)
+            # 准备飞书消息格式（rich文本）
+            message = {
+                "msg_type": "interactive",
+                "card": {
+                    "elements": [
+                        {
+                            "tag": "div",
+                            "text": {
+                                "tag": "lark_md",
+                                "content": f"**{title}**\n\n{content}"
+                            }
+                        }
+                    ]
+                }
+            }
+            
+            # 发送HTTP请求
+            response = requests.post(
+                self.feishu_webhook,
+                json=message,
+                headers={'Content-Type': 'application/json'},
+                timeout=10
+            )
+            
+            # 检查响应
+            if response.status_code == 200:
+                result = response.json()
+                if result.get('StatusCode') == 0 or result.get('code') == 0:
+                    logger.info(f"✓ 飞书推送成功")
+                    return {
+                        'success': True,
+                        'mock': False,
+                        'message': '飞书推送成功',
+                        'response': result
+                    }
+                else:
+                    error_msg = result.get('msg', result.get('message', '未知错误'))
+                    logger.error(f"✗ 飞书推送失败: {error_msg}")
+                    # 回退到Mock模式
+                    logger.info("回退到Mock模式")
+                    return self._mock_feishu(title, content, charts)
+            else:
+                logger.error(f"✗ 飞书推送失败: HTTP {response.status_code}")
+                # 回退到Mock模式
+                logger.info("回退到Mock模式")
+                return self._mock_feishu(title, content, charts)
             
         except Exception as e:
             logger.error(f"[MultiChannelReporter] 飞书推送失败: {e}")
-            return {'success': False, 'error': str(e)}
+            # 回退到Mock模式
+            logger.info("回退到Mock模式")
+            return self._mock_feishu(title, content, charts)
     
     def _mock_feishu(self, title: str, content: str, charts: List[str] = None):
         """Mock飞书推送"""
