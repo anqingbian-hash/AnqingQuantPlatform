@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-03-03T13:49:32.261349",
+  "analysis_results": {
+    "margin": {
+      "alerts_count": 0,
+      "risk_level": "low",
+      "alerts": []
+    },
+    "north_south_funds": {
+      "alerts_count": 1,
+      "risk_level": "low",
+      "alerts": [
+        "✅ 北向资金大幅净流入 65.37亿元：市场机会"
+      ]
+    },
+    "lhb": {
+      "alerts_count": 6,
+      "risk_level": "high",
+      "alerts": [
+        "⚠️ 龙虎榜热点股票 5只：市场过热",
+        "⚠️ 股票A 机构买入比 66.7%：高控盘程度",
+        "⚠️ 股票B 机构买入比 66.7%：高控盘程度",
+        "⚠️ 股票C 机构买入比 66.7%：高控盘程度",
+        "⚠️ 股票D 机构买入比 66.7%：高控盘程度"
+      ]
+    },
+    "stock_flow": {
+      "alerts_count": 0,
+      "risk_level": "low",
+      "alerts": []
+    }
+  },
+  "comprehensive_report": {
+    "csv": "./output/reports/funds_report_20260303_134928.csv",
+    "markdown": "./output/reports/comprehensive_20260303_134928.md",
+    "charts": {
+      "北向资金趋势图": "./output/charts/north_south_trend_20260303_134928.png",
+      "两融趋势图": "./output/charts/margin_trend_20260303_134929.png",
+      "龙虎榜热力图": "./output/charts/lhb_heatmap_20260303_134931.png"
+    }
+  }
+}

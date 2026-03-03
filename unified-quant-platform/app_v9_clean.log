@@ -1,0 +1,4 @@
+  File "/root/.openclaw/workspace/unified-quant-platform/app_v9_clean.py", line 579
+    error_msg = f"选股失败: {str(e)}
+                ^
+SyntaxError: unterminated string literal (detected at line 579)

@@ -309,7 +309,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         {% if error %}
         <div class="error-msg">{{ error }}</div>
         {% endif %}
-        <form method="POST">
+        <form action="/login" method="POST">
             <div class="form-group">
                 <label>用户名</label>
                 <input type="text" name="username" value="admin" required>
@@ -508,7 +508,21 @@ def market():
     return jsonify(data_manager.get_market_data())
 
 @app.route('/api/chip/<symbol>')
+
+@app.route('/api/status')
+def status():
+    return jsonify({
+        'success': True,
+        'data_loaded': bool(data_manager.data_cache),
+        'stock_count': len(data_manager.data_cache),
+        'last_update': data_manager.cache_timestamp.isoformat() if data_manager.cache_timestamp else None,
+        'source': 'tushare'
+    })
+
 @login_required
 def chip(symbol):
     return jsonify(data_manager.get_stock_data(symbol))
 
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=7000, debug=False)

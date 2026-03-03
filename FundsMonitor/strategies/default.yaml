@@ -1,0 +1,25 @@
+# 均线金叉策略
+name: 均线金叉策略
+type: ma_cross
+timeframe: 1D
+description: 短期均线上穿长期均线，金叉买入，死叉卖出
+
+indicators:
+  ma_short: 5      # 短期均线周期
+  ma_long: 20     # 长期均线周期
+  volume_avg: 20  # 成交量均线周期
+
+entry_conditions:
+  golden_cross: true       # 金叉买入
+  volume_confirm: true     # 成交量确认
+  trend_filter: bull      # 只做多
+
+exit_conditions:
+  death_cross: true       # 死叉卖出
+  stop_loss: 0.03        # 3%止损
+  take_profit: 0.06      # 6%止盈
+
+risk_management:
+  position_size: 0.2        # 20%仓位
+  max_positions: 5         # 最多5个仓位
+  daily_loss_limit: 0.01  # 单日亏损限制1%

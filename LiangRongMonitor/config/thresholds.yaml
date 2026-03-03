@@ -1,0 +1,25 @@
+# 两融风险阈值配置
+
+# 两融余额相关
+margin_debt:
+  warning: 1.6e12      # 1.6万亿（预警）
+  danger: 1.8e12       # 1.8万亿（危险）
+  critical: 2.0e12     # 2.0万亿（严重）
+  
+# 两融余额占比（占流通市值）
+margin_ratio:
+  warning: 7.5         # 7.5%（预警）
+  danger: 8.5          # 8.5%（危险）
+  critical: 10.0       # 10.0%（严重）
+  
+# 日变化率
+daily_change:
+  warning: 3.0         # 3%（预警）
+  danger: 5.0          # 5%（危险）
+  critical: 7.0        # 7%（严重）
+  
+# 周变化率
+weekly_change:
+  warning: 7.0         # 7%（预警）
+  danger: 10.0         # 10%（危险）
+  critical: 15.0        # 15%（严重）

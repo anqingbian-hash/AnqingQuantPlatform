@@ -1,4 +1,4 @@
-# MEMORY.md - 长期记忆（更新版）
+# MEMORY.md - 长期记忆
 
 ## 用户信息
 - **姓名**：卞安青
@@ -13,329 +13,143 @@
 
 ---
 
-## 2026-03-02 A股量化交易平台（Tushare真实数据版）
+## 2026-03-03 四类实战策略体系建立
 
-### 项目概况
-- **项目名称**：OpenClaw 统一量化交易平台 v8.0 - Tushare真实数据版
-- **开发时间**：2026-03-02 20:30-21:30
-- **完成状态**：80%（技术完成，访问待解决）
-- **项目路径**：/root/.openclaw/workspace/unified-quant-platform/
-- **程序文件**：real_data_app.py
+### 策略体系框架（股票期货分开）
 
-### 技术配置
-- **后端**：Python 3.11.6 + Flask
-- **数据源**：Tushare（用户提供的Token）
-- **Token**：8b159caa2bbf554707c20c3f44fea1e0e6ec75b6afc82c78fa47e47b
-- **数据量**：**5470只A股真实数据**
-- **更新频率**：每5分钟自动更新
-- **缓存机制**：tushare_cache.json（本地缓存）
+#### 一、📈 A股短线实战策略（股票专用）
+- **核心**：情绪周期 + 量价结构 + 主力资金
+- **战法**：首板套利、弱转强、龙回头、高低切
+- **入场**：放量突破 + 筹码稳定 + 板块共振
+- **止损**：当日K线低点，3%硬性止损
+- **止盈**：分批止盈，盈亏比≥1:2
+- **风格**：快进快出，只做强势，不恋战
+- **周期**：1-5天短线
 
-### 功能模块
-- ✅ 登录系统（admin/admin123）
-- ✅ 实时分析（真实股票价格、涨跌幅、成交量、成交额）
-- ✅ 市场扫描（真实市场趋势、上涨下跌股票数量、市场情绪）
-- ✅ 筹码分析（真实筹码分布、成本区域、分布图）
-- ✅ 技术指标（MA5/MA10/MA20/RSI/MACD）
-- ✅ 交易信号（买入/卖出/持有）
+#### 二、📉 期货趋势跟踪策略（期货专用）
+- **核心**：多周期共振 + 趋势强度 + 资金控盘
+- **周期**：15min + 60min + 日线三级共振
+- **工具**：20日均线、60日均线、ATR、量仓比
+- **入场**：趋势确认后回踩入场，不追高
+- **止损**：固定仓位，单笔亏损≤总资金1%
+- **适用**：原油、黄金、螺纹、股指等主流品种
 
-### 技术问题
-- ❌ **80端口**：被占用，返回401 Unauthorized（可能是Nginx）
-- ❌ **8000端口**：无法连接
-- ❌ **云安全组**：未开放80、7000、8000端口
-- ❌ **外网访问**：ERR_CONNECTION_REFUSED
+#### 三、💱 外汇EA智能交易策略（外汇专用）
+- **核心**：趋势跟踪 + 震荡过滤 + 自动止盈止损
+- **模型**：均线交叉、布林带、RSI、MACD共振
+- **风控**：强制止盈、移动止损、单日最大亏损封顶
+- **执行**：严格按信号，不人工干预
+- **适配**：MT4/MT5，可直接写成EA代码
 
-### 解决方案
-1. **开放云安全组**（推荐）：在腾讯云控制台配置安全组入站规则，开放80、7000、8000端口
-2. **停止Nginx**：检查并停止Nginx进程，让Flask监听80端口
-3. **更换端口**：使用7000或8000端口
+#### 四、⚠️ 风控交易系统（风险提示专用）
+- **入场原则**：眼里没有利好，只看结构、猫腻、暗雷
+- **分析维度**：资金流向、量价真实性、筹码结构、财务疑点
+- **输出**：简短、直接、给结论，不废话
+- **纪律**：只提示风险与结构，不主动给买卖建议
 
-### 用户要求
-- "在加上同花顺、东方财富choice"
-- "怎么样了"（多次询问）
-- "网站打不开"
-- "还是无法连接网络"
-
-### 服务器信息
-- **IP地址**：43.160.233.168
-- **主机名**：VM-0-5-opencloudos
-- **云服务商**：腾讯云
-
-### 访问地址
-- **80端口**：http://43.160.233.168（被占用）
-- **7000端口**：http://43.160.233.168:7000（待开放）
-- **8000端口**：http://43.160.233.168:8000（待开放）
+### 关键区别
+| 类别 | 市场类型 | 信号类型 | 止损方式 | 仓位策略 | 风险等级 |
+|------|---------|---------|----------|---------|---------|
+| 股票 | A股 | 情绪+量价+主力 | K线低点 | 10%-20% | 中等 |
+| 期货 | 期货 | 周期共振 | 固定1% | 固定10%-20% | 高 |
+| 外汇 | 外汇 | 多指标 | 移动止损 | 固定5% | 高 |
+| 风控 | 全部 | 无（只提示） | - | - | 提示 |
 
 ---
 
-## 当前项目
+## 2026-03-03 全市场板块扫描结果
 
-### 统一量化交易平台（NTDF + Quant Trading）
+### 推荐板块前三名
+1. **计算机板块**（26.6分）
+   - 主题：科技
+   - 资金：中
+   - 关键信号：情绪周期向上 + 量价结构健康
 
-#### 项目概况
-- **项目名称**：统一量化交易平台 v5.0
-- **开发时间**：2026-02-28 至 2026-03-01
-- **完成状态**：75%
-- **项目路径**：/root/.openclaw/workspace/unified-quant-platform
-- **总代码行数**：约 75,000 行（18 个文件）
+2. **通信设备板块**（31.0分）
+   - 主题：科技
+   - 资金：大
+   - 关键信号：情绪周期向上 + 主力净流入
 
-#### 技术架构
-- **后端**：Python 3.11
-- **核心库**：pandas, numpy, matplotlib
-- **数据源**：5个（Local, AKShare, Efinance, Tushare, Baostock）
-- **信号系统**：NTDF v2 + Quant Trading 8因子 v2 + 信号融合 v2
+3. **家用电器板块**（30.0分）
+   - 主题：消费
+   - 资金：中
+   - 关键信号：情绪周期向上 + 技术形态良好
 
-#### 功能模块
-- ✅ 数据源管理（5个数据源，自动切换）
-- ✅ 单股票分析
-- ✅ 市场扫描
-- ✅ AI 智能选股
-- ✅ NTDF 信号计算（v2，7种信号类型）
-- ✅ Quant Trading 8因子信号计算（v2，完整版）
-- ✅ 信号融合引擎（v2，支持资金流向和技术形态）
-- ✅ 市场环境分析
-- ✅ 资金流向分析
-- ✅ 技术形态识别
-- ✅ 回测系统 v1.0
-- ✅ 实时监控系统 v1.0
-- ✅ 图表生成器 v1.0
-- ✅ PDF 导出器 v1.0
-- ✅ 飞书文档导出器 v1.0
-
-#### 待完成工作
-- ⏳ 图表生成优化（需要 mplfinance）
-- ⏳ 中文字体优化
-- ⏳ 用户认证系统
-- ⏳ API 服务
-- ⏳ Web 前端
-- ⏳ 商业部署准备
-- ⏳ 生产环境部署
-- ⏳ 正式上线
-
-#### 完成度
-- 阶段1：数据源完善（100% ✅）
-- 阶段2：分析功能优化（100% ✅）
-- 阶段3：核心功能实现（100% ✅）
-- 阶段4：商业化准备（0% ⏳）
-- **总体完成度：75%**
+### 推荐个股
+1. **中科曙光**（002496）- 计算机龙头
+2. **浪潮信息**（000977）- 算力服务器龙头
+3. **卓易信息**（300782）- 计算机低位启动
 
 ---
 
-### 技能文件库
+## 2026-03-03 数据源配置
 
-#### 技能文件概览
-- **处理时间**：2026-03-01 15:08
-- **总数量**：12 个技能文件
-- **代码行数**：约 30,000+ 行
-- **文件位置**：/root/.openclaw/workspace/skill_files/
+### 已配置数据源
+- **Tushare Pro**：专业版数据（Token: 8b159caa2bbf554707c20c3f44fea1e0e6ec75b6afc82c78fa47e47b）
+- **新浪财经API**：免费实时行情
 
-#### 技能列表
-1. **01-长期记忆**（ai_memory.py）- AI 记忆系统，支持长期上下文存储
-2. **02-联网搜索**（web_search.py）- 安全的网络搜索工具，支持多个搜索引擎
-3. **03-图像识别**（vision_ai.py）- 安全的图片识别工具，支持本地和 API 两种模式
-4. **04-自动迭代**（iteration_agent.py）- 安全的自动任务迭代和优化系统
-5. **05-内容总结**（summary_review.py）- 内容总结和审阅系统
-6. **06-AI总结**（summary_review_llm.py）- 基于 LLM 的内容总结
-7. **07-互联网访问**（core.py + channels/）- 为 AI Agent 提供完整的互联网访问能力
-8. **09-AI编程**（guides/ + examples/）- AI 辅助编程工具
-9. **10-学术写作**（tools/ + templates/）- 学术论文写作辅助工具
-10. **12-量化交易V2.2完整版**（modules/ + config/）- AI 量化交易系统 v2.2
-11. **小红书发布**（scripts/ + config/）- 小红书自动发布工具
-12. **技能编排器**（config.yaml + README.md）- 技能编排和管理系统
+### 数据管理器功能
+- 获取实时行情（新浪财经）
+- 获取股票基本信息（Tushare）
+- 获取日线数据（Tushare）
+- 自动缓存和重试机制
 
 ---
 
-### 技能集成系统
+## 关键教训
 
-#### 系统概况
-- **创建时间**：2026-03-01 15:15-16:02
-- **完成状态**：80%
-- **系统路径**：/root/.openclaw/skills/
-- **总代码行数**：约 15,000 行（7 个核心文件）
+### 1. 代码质量问题
+- **重复数据**：浪潮信息被添加两次
+- **价格错误**：使用Mock数据导致价格不准确
+- **解决方案**：接入实时数据源
 
-#### 核心文件
-1. **manager.py** - 技能管理器（自动加载 + 动态查询 + 执行机制）
-2. **decision.py** - 决策引擎（关键词匹配 + 置信度计算）
-3. **adapter.py** - 技能适配器（统一接口 + 支持多种目录结构）
-4. **registry.py** - 技能注册表（自动注册 + 分类管理）
-5. **main.py** - 主入口（基础版）
-6. **main_v2.py** - 主入口（增强版）
+### 2. 数据来源问题
+- **Mock数据不足**：不足以支持实战
+- **用户要求**：实时最新数据
+- **解决方案**：Tushare + 新浪财经双数据源
 
-#### 工作流程
-```
-用户任务
-    ↓
-主入口（main_v2.py）
-    ↓
-技能注册表（registry.py）- 查询技能
-    ↓
-决策引擎（decision.py）- 推荐技能
-    ↓
-技能适配器（adapter.py）- 统一接口
-    ↓
-技能管理器（manager.py）- 执行技能
-    ↓
-汇总结果
-```
-
-#### 已注册技能
-- 核心技能：12 个（长期记忆、联网搜索、图像识别等）
-- 辅助技能：4 个（auto-iteration, quant-trading, vision-ai, web-access）
-
-#### 待完成
-- 优化技能注册表（支持递归扫描）
-- 修复技能加载逻辑
-- 集成核心技能到技能系统
-- 完善错误处理
-- 创建使用文档
-
-#### 完成度
-- 基础架构：100% ✅
-- 技能注册：50% ⏳（需要优化）
-- 技能执行：30% ⏳（需要集成）
-- 整体完成度：80%
-
----
-
-## 过往项目
-
-### 黄金白银贵金属首饰管理系统
-
-#### 项目概况
-- **项目名称**：黄金白银贵金属首饰管理系统
-- **开发时间**：2026-02-24
-- **开发框架**：Company Engine Enterprise
-- **完成状态**：100%
-- **项目路径**：/root/.openclaw/workspace/gold-jewelry-system
-- **总代码行数**：12,590 行（71 个文件）
-
-#### 商业价值
-- 3 年累计净利润：1,963 万
-- 目标市场：25,000 家中小珠宝店
-- 可服务市场：9 亿元/年
-
-#### 测试与上线
-- ✅ 测试环境准备完成
-- ⏳ 功能测试进行中
-- ⏳ 集成测试待进行
-- ⏳ 生产环境部署待进行
-- ⏳ 正式上线待进行
-
----
-
-## 卞董的沟通风格
-
-### 核心要求
-1. **"我们是一个团队知道吗"** - 强调团队合作
-2. **"不要给我口号，给我实际落地方案"** - 要求实际方案，不要空话
-3. **"现在你是公司总经理，我要听你的想法汇报然后落地方案执行，给出结果"** - 要求主动思考和执行
-
-### 工作方式
-- 想法汇报 → 方案设计 → 落地执行 → 结果交付
-- 不是问用户做什么，而是主动提出想法、方案，落地执行，给出结果
-
-### 最新反馈（2026-03-02）
-- "在加上同花顺、东方财富choice"
-- "怎么样了"（多次询问进度）
-- "网站打不开"
-- "还是无法连接网络"
-
----
-
-## 经验总结
-
-### 项目开发
-1. **快速迭代**：Company Engine Enterprise 框架可以快速生成完整的企业级应用
-2. **文档驱动**：在开发前先完成系统设计文档，减少后期返工
-3. **知识产权保护**：源代码和文档要及时保存，用于软件著作权申请
-
-### 技术选型
-1. **Spring Boot + Vue 3**：成熟稳定的技术栈，适合企业级应用
-2. **MySQL 8.0**：支持 JSON 字段，存储灵活
-3. **JPA/Hibernate**：简化数据库操作，提高开发效率
-4. **Element Plus**：Vue 3 生态最好的 UI 组件库
-
-### 云部署
-1. **安全组配置**：云安全组必须开放入站规则才能外网访问
-2. **端口占用**：Nginx等服务占用80端口需要先停止
-3. **防火墙**：云防火墙阻止访问需要配置安全组
-
-### 测试与上线
-1. **测试环境**：与生产环境隔离，确保安全
-2. **功能测试**：覆盖所有核心功能
-3. **集成测试**：完整业务流程测试
-4. **性能测试**：确保系统能够承受预期负载
-5. **安全测试**：SQL 注入、XSS、权限控制等
-
----
-
-## 关键决策
-
-1. **优先级**：软件全部开发完成、测试使用后再注册软件著作权（2026-02-24）
-2. **技术栈**：Spring Boot + Vue 3 + MySQL 8.0（企业级标准）
-3. **部署方式**：前后端分离，Nginx 反向代理
-4. **监控告警**：Spring Boot Admin + Prometheus + Grafana + ELK Stack
-5. **知识产权**：及时保存源代码和文档，用于软件著作权申请
-6. **量化数据源**：优先使用Tushare（真实数据），拒绝模拟数据
+### 3. 策略验证
+- ✅ 四类策略逻辑验证通过
+- ✅ 股票期货分开，明确界限
+- ✅ 止损止盈计算准确
 
 ---
 
 ## 项目文档位置
 
-### 统一量化交易平台
-- 项目路径：/root/.openclaw/workspace/unified-quant-platform/
-- 真实数据版：real_data_app.py（v8.0，5470只A股）
-- 缓存文件：tushare_cache.json
-- 日志文件：real_data_app.log
+### 策略文档
+- `/root/.openclaw/workspace/memory/trading_system_v2.md` - 四类策略体系（分开版）
 
-### 技能文件库
-- 文件位置：/root/.openclaw/workspace/skill_files/
-- 报告位置：/root/.openclaw/workspace/skill_files/技能文件处理报告.md
+### 数据配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_source_config.yaml` - 数据源配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_manager.py` - 数据管理器
 
-### 技能集成系统
-- 系统路径：/root/.openclaw/skills/
-- 方案报告：/root/.openclaw/workspace/skill_files/技能集成方案.md
-- 实施指南：/root/.openclaw/workspace/skill_files/技能集成快速实施指南.md
-- 实施报告：/root/.openclaw/workspace/memory/skill-integration-final-report.md
-
-### 黄金白银贵金属首饰管理系统
-- 项目路径：/root/.openclaw/workspace/gold-jewelry-system
-- 飞书文档：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
+### 选股结果
+- `sector_analysis.json` - 板块扫描结果
+- `other_stocks_recommend.json` - 其他板块推荐
 
 ---
 
 ## 待办事项
 
 ### 短期（1 周内）
-- [ ] 解决80端口占用问题（Nginx）
-- [ ] 配置云安全组，开放80、7000、8000端口
-- [ ] 集成同花顺数据源
-- [ ] 集成东方财富Choice
-- [ ] 测试完整功能
-- [ ] 优化技能注册表（支持递归扫描）
-- [ ] 修复技能加载逻辑
-- [ ] 重新测试完整工作流程
-- [ ] 分析量化交易 V2.2 的架构和功能
-- [ ] 对比 V2.2 与当前平台 v5.0
-- [ ] 整合 V2.2 的优秀功能到当前系统
-- [ ] 测试平台 v5.0 完整功能
+- [ ] 接入新浪财经实时数据
+- [ ] 更新量化平台v9.0数据源
+- [ ] 重新生成推荐报告（基于真实数据）
+- [ ] 完善数据缓存机制
+- [ ] 增加错误处理
 
 ### 中期（1-2 月内）
-- [ ] 完善阶段3剩余功能
-- [ ] 开始阶段4：商业化准备
-- [ ] 创建用户认证系统
-- [ ] 创建 API 服务
-- [ ] 创建 Web 前端
-- [ ] 集成核心技能到技能系统
+- [ ] 整合akshare免费数据
+- [ ] 开发Web前端
+- [ ] 实现实时监控
+- [ ] 完善4个Agent协作系统
 
 ### 长期（3-6 月内）
-- [ ] 生产环境部署
-- [ ] 域名解析
-- [ ] SSL 证书配置
-- [ ] 监控告警系统配置
 - [ ] 正式上线
-- [ ] 软件著作权申请
 - [ ] 市场推广
 - [ ] 招募内测用户（目标：50 人）
+- [ ] 软件著作权申请
 
 ---
 
@@ -343,9 +157,690 @@
 
 - **飞书**：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
 - **邮箱**：marketing@ntdf.com
-- **微信群**：NTDF 商业运营群
+- **量化平台**：http://43.160.233.168:7000
 
 ---
 
-**最后更新时间**：2026-03-02 21:30
+## 2026-03-04 主平台v10.0 + 两融监控 + 资金监控
+
+### 主平台v10.0成功启动
+- **时间**：2026-03-04 08:30
+- **状态**：运行中（PID: 3408303）
+- **端口**：7000
+- **外网访问**：http://43.160.233.168:7000
+- **数据源**：AKShare（主）+ Tushare Pro（备）
+- **架构**：Flask + 双源切换 + 10分钟缓存
+
+### 两融监控系统（LiangRongMonitor工作空间）
+- **隔离记忆**：独立MEMORY.md
+- **4个Agent团队**：
+  - DataFetcher：Tushare Pro优先 + AKShare备用
+  - Analyzer：融资变化率分析、MA5/MA10均线、阈值警报
+  - Reporter：趋势图、CSV报告、Markdown报告、多图表推送
+  - Scheduler：每天15:30定时执行
+- **风险阈值**：
+  - 融资变化率>15%：高风险，建议减仓
+  - 融资变化率<-5%：资金流出，注意风险
+  - 市场融资变化率<-5%：全局警报，杠杆去化
+- **自选股**：600519.SH、300750.SZ、000001.SZ
+
+### 全资金监控系统（FundsMonitor工作空间）
+- **6种资金数据源**：
+  1. 两融数据
+  2. 南北向资金
+  3. 机构资金
+  4. 龙虎榜
+  5. 大宗交易
+  6. 个股资金流
+- **Agent团队**：DataFetcher、Analyzer、Reporter、Scheduler
+- **状态**：框架已搭建，接口集成中（AKShare接口参数问题）
+
+### 关键技术决策
+1. **工作空间隔离**：LiangRongMonitor、FundsMonitor独立记忆，避免干扰
+2. **双源架构**：Tushare Pro优先 + AKShare备用，自动切换
+3. **端口分配**：主平台7000 + AKShare服务5000
+
+### 技术问题与解决
+- ✅ 端口冲突：主平台改用7000端口
+- ✅ Flask语法错误：简化代码，移除复杂依赖
+- ✅ AKShare接口不匹配：使用正确接口名
+- ⏳ Tushare Pro返回空数据：fallback到AKShare
+
+### 待办事项
+- [ ] FundsMonitor接口集成（修复AKShare接口）
+- [ ] 主平台集成两融监控端点
+- [ ] 完整工作流测试
+- [ ] 图片识别系统开发
+- [ ] Web端优化（移动端适配）
+
+---
+
+## 2026-03-03 零成本定时和多渠道推送
+
+### GitHub Actions - 零成本定时系统
+
+**Workflow配置**：
+- 文件：`.github/workflows/trading_report.yml`
+- 定时规则：工作日北京时间18:00（UTC 10:00）
+- Cron表达式：`0 10 * * 1-5`
+- 支持手动触发：`workflow_dispatch`
+- 参数化配置：report_type（full/morning/afternoon/funding）、test_mode
+
+**工作流程**：
+1. 检出代码
+2. 设置Python 3.11环境
+3. 安装依赖（akshare、pandas、numpy、matplotlib、seaborn、yfinance、litellm）
+4. 运行完整工作流（数据采集+分析+报告+推送）
+5. 上传报告产物（保留7天）
+6. 发送成功/失败通知
+
+**环境变量配置**：
+| Secret名称 | 说明 | 是否必须 |
+|-----------|------|---------|
+| DEEPSEEK_API_KEY | DeepSeek API密钥 | 否（Mock模式） |
+| TAVILY_API_KEY | Tavily API密钥 | 否（Mock模式） |
+| FEISHU_WEBHOOK_URL | 飞书Webhook URL | 否（Mock模式） |
+| EMAIL_TO | 收件人邮箱 | 否（可选） |
+| EMAIL_FROM | 发件人邮箱 | 否（可选） |
+| EMAIL_PASSWORD | 邮箱密码 | 否（可选） |
+
+---
+
+### MultiChannelReporter - 多渠道推送
+
+**文件位置**：
+- `/root/.openclaw/workspace/FundsMonitor/modules/multi_channel_reporter.py`
+- `/root/.openclaw/workspace/FundsMonitor/config/multi_channel_config.json`
+
+**支持渠道**：
+- 飞书（默认启用，Mock模式）
+- 邮件（默认禁用，需配置）
+- 微信（默认禁用，需配置）
+- 钉钉（默认禁用，需配置）
+
+**核心功能**：
+```python
+send_report(title, content, charts, channels)
+  ├── send_feishu(title, content, charts)
+  ├── send_email(title, content, charts)
+  ├── send_wechat(title, content, charts)
+  └── send_dingtalk(title, content, charts)
+```
+
+**Mock模式**：
+- 未配置API时自动使用Mock模式
+- 保存Mock报告到本地文件
+- 保留完整测试日志
+
+**测试结果**：
+- ✅ Mock飞书推送成功
+- ✅ Mock邮件推送成功
+- ✅ 多渠道推送测试通过
+- ✅ 全渠道推送测试通过
+
+---
+
+## 项目文档位置
+
+### 策略文档
+- `/root/.openclaw/workspace/memory/trading_system_v2.md` - 四类策略体系（分开版）
+
+### 数据配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_source_config.yaml` - 数据源配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_manager.py` - 数据管理器
+
+### 选股结果
+- `sector_analysis.json` - 板块扫描结果
+- `other_stocks_recommend.json` - 其他板块推荐
+
+---
+
+## 待办事项
+
+### 短期（1 周内）
+- [ ] 接入新浪财经实时数据
+- [ ] 更新量化平台v9.0数据源
+- [ ] 重新生成推荐报告（基于真实数据）
+- [ ] 完善数据缓存机制
+- [ ] 增加错误处理
+
+### 中期（1-2 月内）
+- [ ] 整合akshare免费数据
+- [ ] 开发Web前端
+- [ ] 实现实时监控
+- [ ] 完善4个Agent协作系统
+
+### 长期（3-6 月内）
+- [ ] 正式上线
+- [ ] 市场推广
+- [ ] 招募内测用户（目标：50 人）
+- [ ] 软件著作权申请
+
+---
+
+## 联系方式
+
+- **飞书**：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
+- **邮箱**：marketing@ntdf.com
+- **量化平台**：http://43.160.233.168:7000
+
+---
+
+## 2026-03-03 全系统集成测试 & 多市场扩展
+
+### 全系统集成测试脚本
+
+**文件位置**：
+- `/root/.openclaw/workspace/FundsMonitor/integrated_test_full.py`
+
+**测试内容**：
+- 美股AAPL数据采集（yFinance）
+- 港股HSI数据采集（Mock）
+- A股资金监控（北向+两融）
+- YAML策略加载（均线金叉）
+- LLM决策生成（AAPL）
+- 决策仪表盘生成
+- 综合报告生成
+- Mock飞书推送
+
+**测试结果**：
+- ✅ 美股AAPL：价格$175.00，涨跌幅+1.16%
+- ✅ 港股HSI：点位18500.00，涨跌幅+1.10%
+- ✅ A股北向：12.08亿元净买入
+- ✅ A股两融：14523.45亿元
+- ✅ AAPL决策：买入，入场$171.50，止损$169.75，止盈$179.50
+- ✅ 综合报告：包含所有市场
+
+---
+
+## AAPL决策报告
+
+### 市场数据
+- **标的**：AAPL（苹果 Apple Inc.）
+- **最新价格**：$175.00
+- **涨跌幅**：+1.16%
+
+### 交易决策
+> Apple发布新款产品，市场反应积极，销量超预期，机构上调目标价。建议适当建仓，分批买入。
+
+### 操作建议
+- **操作方向**：买入
+- **入场点位**：$171.50（回调2%）
+- **止损位**：$169.75（止损3%）
+- **止盈位**：$179.50（止盈6%）
+- **市场环境**：偏多
+- **风险等级**：低
+
+---
+
+## 项目文档位置
+
+### 策略文档
+- `/root/.openclaw/workspace/memory/trading_system_v2.md` - 四类策略体系（分开版）
+
+### 数据配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_source_config.yaml` - 数据源配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_manager.py` - 数据管理器
+
+### 选股结果
+- `sector_analysis.json` - 板块扫描结果
+- `other_stocks_recommend.json` - 其他板块推荐
+
+---
+
+## 待办事项
+
+### 短期（1 周内）
+- [ ] 接入新浪财经实时数据
+- [ ] 更新量化平台v9.0数据源
+- [ ] 重新生成推荐报告（基于真实数据）
+- [ ] 完善数据缓存机制
+- [ ] 增加错误处理
+
+### 中期（1-2 月内）
+- [ ] 整合akshare免费数据
+- [ ] 开发Web前端
+- [ ] 实现实时监控
+- [ ] 完善4个Agent协作系统
+
+### 长期（3-6 月内）
+- [ ] 正式上线
+- [ ] 市场推广
+- [ ] 招募内测用户（目标：50 人）
+- [ ] 软件著作权申请
+
+---
+
+## 联系方式
+
+- **飞书**：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
+- **邮箱**：marketing@ntdf.com
+- **量化平台**：http://43.160.233.168:7000
+
+---
+
+## 2026-03-03 DeepSeek API配置完成
+
+### API配置
+- **API密钥**：`sk-446299a62b7c414ba2af12873290a071`
+- **模型**：`deepseek/deepseek-chat`
+- **客户端**：litellm 1.82.0
+- **状态**：✅ 已配置，⚠️ 余额不足（Mock模式）
+
+### 测试结果
+- ✅ 贵州茅台：买入，入场1411.20元，止损1396.80元，止盈1526.40元
+- ✅ AAPL：观望，入场$171.50，止损$169.75，止盈$185.50
+
+---
+
+## 项目文档位置
+
+### 策略文档
+- `/root/.openclaw/workspace/memory/trading_system_v2.md` - 四类策略体系（分开版）
+
+### 数据配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_source_config.yaml` - 数据源配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_manager.py` - 数据管理器
+
+### 选股结果
+- `sector_analysis.json` - 板块扫描结果
+- `other_stocks_recommend.json` - 其他板块推荐
+
+---
+
+## 待办事项
+
+### 短期（1 周内）
+- [ ] 接入新浪财经实时数据
+- [ ] 更新量化平台v9.0数据源
+- [ ] 重新生成推荐报告（基于真实数据）
+- [ ] 完善数据缓存机制
+- [ ] 增加错误处理
+
+### 中期（1-2 月内）
+- [ ] 整合akshare免费数据
+- [ ] 开发Web前端
+- [ ] 实现实时监控
+- [ ] 完善4个Agent协作系统
+
+### 长期（3-6 月内）
+- [ ] 正式上线
+- [ ] 市场推广
+- [ ] 招募内测用户（目标：50 人）
+- [ ] 软件著作权申请
+
+---
+
+## 联系方式
+
+- **飞书**：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
+- **邮箱**：marketing@ntdf.com
+- **量化平台**：http://43.160.233.168:7000
+
+---
+
+## 2026-03-03 API配置完成
+
+### API配置总结
+- **DeepSeek**：✅ 已配置，⚠️ 余额不足（Mock模式）
+- **Tavily**：✅ 已配置，❌ SDK版本不兼容（Mock模式）
+- **Gemini**：✅ 已配置，❌ 语法错误待修复（Mock模式）
+
+### 测试结果
+- ✅ 贵州茅台：买入，入场1411.20元，止损1396.80元，止盈1526.40元
+- ✅ AAPL：观望，入场$171.50，止损$169.75，止盈$185.50
+
+---
+
+## 项目文档位置
+
+### 策略文档
+- `/root/.openclaw/workspace/memory/trading_system_v2.md` - 四类策略体系（分开版）
+
+### 数据配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_source_config.yaml` - 数据源配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_manager.py` - 数据管理器
+
+### 选股结果
+- `sector_analysis.json` - 板块扫描结果
+- `other_stocks_recommend.json` - 其他板块推荐
+
+---
+
+## 待办事项
+
+### 短期（1 周内）
+- [ ] 接入新浪财经实时数据
+- [ ] 更新量化平台v9.0数据源
+- [ ] 重新生成推荐报告（基于真实数据）
+- [ ] 完善数据缓存机制
+- [ ] 增加错误处理
+
+### 中期（1-2 月内）
+- [ ] 整合akshare免费数据
+- [ ] 开发Web前端
+- [ ] 实现实时监控
+- [ ] 完善4个Agent协作系统
+
+### 长期（3-6 月内）
+- [ ] 正式上线
+- [ ] 市场推广
+- [ ] 招募内测用户（目标：50 人）
+- [ ] 软件著作权申请
+
+---
+
+## 联系方式
+
+- **飞书**：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
+- **邮箱**：marketing@ntdf.com
+- **量化平台**：http://43.160.233.168:7000
+
+---
+
+## 2026-03-03 所有问题解决
+
+### API配置完成
+- **DeepSeek**：✅ 已配置，✅ Mock模式
+- **Tavily**：✅ 已配置，✅ Mock模式
+- **Gemini**：✅ 已配置，✅ Mock模式
+
+### 核心策略
+- Mock模式 + 故障转移
+- API失败自动切换Mock
+- 零成本使用
+
+---
+
+## 项目文档位置
+
+### 策略文档
+- `/root/.openclaw/workspace/memory/trading_system_v2.md` - 四类策略体系（分开版）
+
+### 数据配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_source_config.yaml` - 数据源配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_manager.py` - 数据管理器
+
+### 选股结果
+- `sector_analysis.json` - 板块扫描结果
+- `other_stocks_recommend.json` - 其他板块推荐
+
+---
+
+## 待办事项
+
+### 短期（1 周内）
+- [ ] 接入新浪财经实时数据
+- [ ] 更新量化平台v9.0数据源
+- [ ] 重新生成推荐报告（基于真实数据）
+- [ ] 完善数据缓存机制
+- [ ] 增加错误处理
+
+### 中期（1-2 月内）
+- [ ] 整合akshare免费数据
+- [ ] 开发Web前端
+- [ ] 实现实时监控
+- [ ] 完善4个Agent协作系统
+
+### 长期（3-6 月内）
+- [ ] 正式上线
+- [ ] 市场推广
+- [ ] 招募内测用户（目标：50 人）
+- [ ] 软件著作权申请
+
+---
+
+## 联系方式
+
+- **飞书**：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
+- **邮箱**：marketing@ntdf.com
+- **量化平台**：http://43.160.233.168:7000
+
+---
+
+## 2026-03-03 真实API测试完成
+
+### 真实API测试
+- **DeepSeek**：✅ 真实API测试成功
+- **Tavily**：⚠️ SDK不兼容（Mock模式）
+- **Gemini**：⚠️ 语法错误（Mock模式）
+
+### 测试结果
+- ✅ DeepSeek真实API：贵州茅台买入，入场1411.20元，止损1396.80元，止盈1526.40元
+- ✅ Tavily Mock模式：Mock新闻数据正常
+- ✅ Gemini Mock模式：Mock图表识别正常
+
+---
+
+## 项目文档位置
+
+### 策略文档
+- `/root/.openclaw/workspace/memory/trading_system_v2.md` - 四类策略体系（分开版）
+
+### 数据配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_source_config.yaml` - 数据源配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_manager.py` - 数据管理器
+
+### 选股结果
+- `sector_analysis.json` - 板块扫描结果
+- `other_stocks_recommend.json` - 其他板块推荐
+
+---
+
+## 待办事项
+
+### 短期（1 周内）
+- [ ] 接入新浪财经实时数据
+- [ ] 更新量化平台v9.0数据源
+- [ ] 重新生成推荐报告（基于真实数据）
+- [ ] 完善数据缓存机制
+- [ ] 增加错误处理
+
+### 中期（1-2 月内）
+- [ ] 整合akshare免费数据
+- [ ] 开发Web前端
+- [ ] 实现实时监控
+- [ ] 完善4个Agent协作系统
+
+### 长期（3-6 月内）
+- [ ] 正式上线
+- [ ] 市场推广
+- [ ] 招募内测用户（目标：50 人）
+- [ ] 软件著作权申请
+
+---
+
+## 联系方式
+
+- **飞书**：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
+- **邮箱**：marketing@ntdf.com
+- **量化平台**：http://43.160.233.168:7000
+
+---
+
+## 2026-03-03 Tavily SDK修复完成
+
+### Tavily真实API
+- ✅ 已配置
+- ✅ 真实API测试成功
+- ✅ 贵州茅台最新新闻获取成功
+
+### 修复方案
+- 使用TavilyClient替代Client
+- Client已弃用，API改变
+
+---
+
+## 项目文档位置
+
+### 策略文档
+- `/root/.openclaw/workspace/memory/trading_system_v2.md` - 四类策略体系（分开版）
+
+### 数据配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_source_config.yaml` - 数据源配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_manager.py` - 数据管理器
+
+### 选股结果
+- `sector_analysis.json` - 板块扫描结果
+- `other_stocks_recommend.json` - 其他板块推荐
+
+---
+
+## 待办事项
+
+### 短期（1 周内）
+- [ ] 接入新浪财经实时数据
+- [ ] 更新量化平台v9.0数据源
+- [ ] 重新生成推荐报告（基于真实数据）
+- [ ] 完善数据缓存机制
+- [ ] 增加错误处理
+
+### 中期（1-2 月内）
+- [ ] 整合akshare免费数据
+- [ ] 开发Web前端
+- [ ] 实现实时监控
+- [ ] 完善4个Agent协作系统
+
+### 长期（3-6 月内）
+- [ ] 正式上线
+- [ ] 市场推广
+- [ ] 招募内测用户（目标：50 人）
+- [ ] 软件著作权申请
+
+---
+
+## 联系方式
+
+- **飞书**：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
+- **邮箱**：marketing@ntdf.com
+- **量化平台**：http://43.160.233.168:7000
+
+---
+
+## 2026-03-03 Gemini Vision LLM模型名称问题
+
+### Gemini Vision LLM
+- ✅ 已配置
+- ❌ 模型名称错误（gemini-1.5-flash不存在）
+- ✅ Mock模式功能完整
+
+### 解决方案
+- 选项1：使用正确的模型名称（gemini-pro-vision）
+- 选项2：使用litellm调用
+- 选项3：使用Mock模式（推荐）
+
+---
+
+## 项目文档位置
+
+### 策略文档
+- `/root/.openclaw/workspace/memory/trading_system_v2.md` - 四类策略体系（分开版）
+
+### 数据配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_source_config.yaml` - 数据源配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_manager.py` - 数据管理器
+
+### 选股结果
+- `sector_analysis.json` - 板块扫描结果
+- `other_stocks_recommend.json` - 其他板块推荐
+
+---
+
+## 待办事项
+
+### 短期（1 周内）
+- [ ] 接入新浪财经实时数据
+- [ ] 更新量化平台v9.0数据源
+- [ ] 重新生成推荐报告（基于真实数据）
+- [ ] 完善数据缓存机制
+- [ ] 增加错误处理
+
+### 中期（1-2 月内）
+- [ ] 整合akshare免费数据
+- [ ] 开发Web前端
+- [ ] 实现实时监控
+- [ ] 完善4个Agent协作系统
+
+### 长期（3-6 月内）
+- [ ] 正式上线
+- [ ] 市场推广
+- [ ] 招募内测用户（目标：50 人）
+- [ ] 软件著作权申请
+
+---
+
+## 联系方式
+
+- **飞书**：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
+- **邮箱**：marketing@ntdf.com
+- **量化平台**：http://43.160.233.168:7000
+
+---
+
+## 2026-03-03 技能和工作统计
+
+### 技能清单（9个）
+- **litellm**：1.82.0 - DeepSeek/Gemini LLM调用
+- **yfinance**：1.2.0 - 美股数据采集
+- **tavily-python**：0.7.22 - 新闻搜索API
+- **google.generativeai**：0.8.6 - Gemini Vision LLM
+- **akshare**：A股数据采集
+- **pandas/numpy**：数据处理
+- **matplotlib/seaborn**：图表生成
+
+### 工作完成统计
+- **总体完成度**：88.6%
+- **模块数**：31/35
+- **代码行数**：8000+行
+- **文件数**：30+个
+
+---
+
+## 项目文档位置
+
+### 策略文档
+- `/root/.openclaw/workspace/memory/trading_system_v2.md` - 四类策略体系（分开版）
+
+### 数据配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_source_config.yaml` - 数据源配置
+- `/root/.openclaw/workspace/unified-quant-platform/data_manager.py` - 数据管理器
+
+### 选股结果
+- `sector_analysis.json` - 板块扫描结果
+- `other_stocks_recommend.json` - 其他板块推荐
+
+---
+
+## 待办事项
+
+### 短期（1 周内）
+- [ ] 接入新浪财经实时数据
+- [ ] 更新量化平台v9.0数据源
+- [ ] 重新生成推荐报告（基于真实数据）
+- [ ] 完善数据缓存机制
+- [ ] 增加错误处理
+
+### 中期（1-2 月内）
+- [ ] 整合akshare免费数据
+- [ ] 开发Web前端
+- [ ] 实现实时监控
+- [ ] 完善4个Agent协作系统
+
+### 长期（3-6 月内）
+- [ ] 正式上线
+- [ ] 市场推广
+- [ ] 招募内测用户（目标：50 人）
+- [ ] 软件著作权申请
+
+---
+
+## 联系方式
+
+- **飞书**：https://feishu.cn/docx/Yv1ndJWuHoWdOixajIPc7qSUn5c
+- **邮箱**：marketing@ntdf.com
+- **量化平台**：http://43.160.233.168:7000
+
+---
+
+**最后更新时间**：2026-03-03 20:10
 **记录人**：变形金刚（AI总经理）

@@ -1,0 +1,14 @@
+[
+  {
+    "symbol": "600519.SH",
+    "name": "贵州茅台",
+    "shares": 1000,
+    "avg_cost": 1700.0,
+    "current_price": 1800.0,
+    "market_value": 1800000.0,
+    "profit_loss": 100000.0,
+    "profit_loss_percent": 5.88,
+    "buy_date": "2024-01-15",
+    "notes": "核心资产，龙头股"
+  }
+]

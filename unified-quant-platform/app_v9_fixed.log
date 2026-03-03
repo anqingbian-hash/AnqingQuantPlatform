@@ -1,0 +1,4 @@
+  File "/root/.openclaw/workspace/unified-quant-platform/app_v9_complete.py", line 605
+    @login_required
+    ^
+IndentationError: expected an indented block after function definition on line 604

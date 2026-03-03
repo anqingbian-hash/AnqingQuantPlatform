@@ -1,0 +1,40 @@
+
+# WhatsApp配置文件
+# 生成时间: 2026-03-03 09:52
+
+## 个人WhatsApp（用于登录）
+whatsapp_personal:
+  enabled: true
+  phone_number: "+8618806227779"  # 卞董的号码
+
+## WhatsApp Business API（用于API调用）
+whatsapp_business:
+  enabled: false  # 待配置
+  business_id: "YOUR_BUSINESS_ID"
+  phone_number_id: "YOUR_PHONE_NUMBER_ID"
+  access_token: "YOUR_ACCESS_TOKEN"
+  webhook_url: "YOUR_WEBHOOK_URL"
+  verify_token: "YOUR_VERIFY_TOKEN"
+
+## 量化平台通知配置
+notification:
+  enabled: true
+  channels:
+    - whatsapp
+    - feishu
+  recipients:
+    primary: "+8618806227779"  # 卞董的号码
+    test: "+8618806227778"
+  
+  # 通知类型
+  types:
+    stock_recommendation: true  # 股票推荐
+    stop_loss: true            # 止损提醒
+    take_profit: true         # 止盈提醒
+    sector_scan: true         # 板块扫描结果
+
+## 通知频率控制
+throttle:
+  max_per_hour: 10          # 每小时最多10条
+  max_per_day: 50           # 每天最多50条
+  cooldown_seconds: 60       # 同一类型消息冷却60秒

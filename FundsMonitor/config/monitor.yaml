@@ -1,0 +1,51 @@
+# FundsMonitor 监控配置
+
+monitor:
+  # 数据源
+  data_source:
+    type: 'akshare'
+    update_interval: 300  # 5分钟更新
+    
+  # 风险阈值
+  thresholds:
+    # 两融阈值
+    margin:
+      stock_change_rate_high: 15.0      # 个股融资变化率高阈值
+      stock_change_rate_low: -5.0       # 个股融资变化率低阈值
+      market_change_rate_warning: -5.0  # 市场融资变化率预警阈值
+      margin_growth_positive: 0.0       # 融资余额增长阈值
+    
+    # 资金流向阈值
+    funds:
+      north_outflow_warning: -50.0       # 北向资金流出预警（亿元）
+      south_inflow_warning: 30.0         # 南向资金流入预警（亿元）
+      institutional_outflow_warning: -100.0  # 机构流出预警（亿元）
+    
+    # 龙虎榜阈值
+    lhb:
+      hot_count_warning: 3               # 热点股票数量预警
+      buy_ratio_warning: 0.6              # 机构买入比例预警
+    
+    # 大宗交易阈值
+    blocks:
+      premium_warning: 20.0               # 溢价率预警（%）
+      volume_warning: 10000.0             # 成交量预警（万元）
+  
+  # 警报配置
+  alert:
+    enabled: true
+    channels:
+      - 'feishu'
+      - 'email'
+    feishu_user_id: 'ou_4ea9ab25e2205ba44aadece04ba60ddd'
+    
+  # 图表配置
+  chart:
+    enabled: true
+    output_dir: 'charts/'
+    dpi: 300
+    
+  # 日志配置
+  log:
+    level: 'INFO'
+    file: 'logs/monitor.log'

@@ -1,0 +1,32 @@
+# 两融监控配置
+
+monitor:
+  # 数据源配置
+  data_source:
+    type: 'akshare'
+    update_interval: 300  # 更新间隔（秒）
+    
+  # 风险阈值
+  thresholds:
+    daily_change_percent: 5.0    # 日变化率阈值（%）
+    weekly_change_percent: 10.0   # 周变化率阈值（%）
+    margin_debt_ratio: 8.0       # 两融余额占比阈值（%）
+    
+  # 预警配置
+  alert:
+    enabled: true
+    channels:
+      - 'feishu'
+      - 'email'
+    feishu_user_id: 'ou_4ea9ab25e2205ba44aadece04ba60ddd'
+    
+  # 可视化配置
+  chart:
+    enabled: true
+    output_dir: 'charts/'
+    dpi: 300
+    
+  # 日志配置
+  log:
+    level: 'INFO'
+    file: 'logs/monitor.log'

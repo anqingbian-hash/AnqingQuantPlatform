@@ -1,0 +1,61 @@
+✅ Tushare Token 配置成功
+✅ 加载缓存: 5470 只股票
+============================================================
+🔄 开始更新数据...
+============================================================
+🔄 使用 Tushare 数据源...
+⚠️ Tushare 返回空数据
+⚠️ Tushare失败，使用缓存数据
+============================================================
+🔄 开始更新数据...
+============================================================
+🔄 使用 Tushare 数据源...
+✅ 后台更新线程已启动，更新间隔: 300秒
+ * Serving Flask app 'real_data_app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7000
+ * Running on http://10.3.0.5:7000
+Press CTRL+C to quit
+127.0.0.1 - - [03/Mar/2026 07:44:47] "GET / HTTP/1.1" 200 -
+[2026-03-03 07:44:54,790] ERROR in app: Exception on /api/status [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/unified-quant-platform/real_data_app.py", line 519, in status
+    'source': data_manager.active_source
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TushareDataManager' object has no attribute 'active_source'
+127.0.0.1 - - [03/Mar/2026 07:44:54] "GET /api/status HTTP/1.1" 500 -
+127.0.0.1 - - [03/Mar/2026 07:44:55] "GET /api/realtime/600519 HTTP/1.1" 302 -
+127.0.0.1 - - [03/Mar/2026 07:45:02] "POST /login HTTP/1.1" 302 -
+[2026-03-03 07:45:02,291] ERROR in app: Exception on /api/status [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/unified-quant-platform/real_data_app.py", line 519, in status
+    'source': data_manager.active_source
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TushareDataManager' object has no attribute 'active_source'
+127.0.0.1 - - [03/Mar/2026 07:45:02] "GET /api/status HTTP/1.1" 500 -

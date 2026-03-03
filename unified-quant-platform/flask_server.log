@@ -1,0 +1,28 @@
+INFO:__main__:双数据源管理器初始化完成
+================================================================================
+🚀 AKShare + Tushare 双源切换Flask接口
+================================================================================
+⏰ 启动时间: 2026-03-03 10:39:32
+📡 服务地址: http://0.0.0.0:5000
+================================================================================
+API端点:
+  GET  /api/health                    - 健康检查
+  GET  /api/realtime_quotes           - 实时行情
+  GET  /api/stock_info/<symbol>        - 股票基本信息
+  GET  /api/history/<symbol>            - 历史行情
+  POST /api/cache/clear                - 清空缓存
+================================================================================
+ * Serving Flask app 'dual_source_flask_api'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.3.0.5:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:双数据源管理器初始化完成
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 118-896-091
+INFO:werkzeug:127.0.0.1 - - [03/Mar/2026 10:39:49] "GET /api/health HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Mar/2026 11:03:55] "[33mGET /api/moneyflow/300750 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Mar/2026 11:03:55] "[33mGET /api/lhb/300750 HTTP/1.1[0m" 404 -

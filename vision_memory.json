@@ -1,0 +1,29 @@
+{
+  "images": [
+    {
+      "timestamp": "2026-03-03T10:32:09.865929",
+      "image_type": "表格数据",
+      "description": "股票代码测试图片",
+      "ocr_result": "600519.SH 茅台 1648.50 -1.23%",
+      "tags": [
+        "股票代码",
+        "茅台",
+        "行情"
+      ],
+      "content": "600519.SH 茅台 1648.50 -1.23%"
+    }
+  ],
+  "texts": [
+    {
+      "timestamp": "2026-03-03T10:32:09.866232",
+      "text": "卞董要求优化图片识别和记忆技能",
+      "source": "user_request",
+      "context": {
+        "priority": "high",
+        "task": "vision_memory"
+      }
+    }
+  ],
+  "stocks": [],
+  "context": []
+}

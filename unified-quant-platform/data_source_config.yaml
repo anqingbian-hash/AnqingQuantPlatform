@@ -1,0 +1,26 @@
+
+# AnqingA股大师 - 数据源配置
+
+## Tushare Pro配置
+tushare:
+  token: 8b159caa2bbf554707c20c3f44fea1e0e6ec75b6afc82c78fa47e47b
+  api_url: https://api.tushare.pro
+  timeout: 30
+  retry_times: 3
+
+## 新浪财经配置
+sina:
+  base_url: http://hq.sinajs.cn/list=
+  encoding: gbk
+  timeout: 10
+
+## 数据获取优先级
+data_sources:
+  - tushare: 90% (主要数据源)
+  - sina: 10% (实时补充)
+
+## 缓存策略
+cache:
+  enabled: true
+  ttl: 300  # 5分钟缓存
+  file: tushare_cache.json

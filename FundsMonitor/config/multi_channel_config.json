@@ -1,0 +1,19 @@
+{
+  "feishu_enabled": true,
+  "feishu_webhook": "",
+  
+  "email_enabled": false,
+  "email_to": "your_email@example.com",
+  "email_from": "your_email@163.com",
+  "email_password": "your_password",
+  "email_smtp": "smtp.163.com",
+  "email_port": 465,
+  
+  "wechat_enabled": false,
+  "wechat_appid": "",
+  "wechat_secret": "",
+  
+  "dingtalk_enabled": false,
+  "dingtalk_webhook": "",
+  "dingtalk_secret": ""
+}
