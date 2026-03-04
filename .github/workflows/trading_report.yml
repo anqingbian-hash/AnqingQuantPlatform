@@ -1,10 +1,8 @@
 name: 交易报告自动生成
+
 on:
-  # 工作日北京时间18:00执行（UTC 10:00）
   schedule:
     - cron: '0 10 * * 1-5'
-  
-  # 手动触发
   workflow_dispatch:
     inputs:
       report_type:
@@ -13,10 +11,10 @@ on:
         default: 'full'
         type: choice
         options:
-          - full       # 完整报告
-          - morning    # 早盘异动
-          - afternoon  # 尾盘监控
-          - funding    # 资金监控
+          - full
+          - morning
+          - afternoon
+          - funding
       test_mode:
         description: '测试模式（不推送飞书）'
         required: false
@@ -26,68 +24,39 @@ on:
 jobs:
   generate_report:
     runs-on: ubuntu-latest
-    
+
     steps:
-      # 1. 检出代码
       - name: Checkout代码
         uses: actions/checkout@v3
-      
-      # 2. 设置Python环境
+
       - name: 设置Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      
-      # 3. 安装依赖
+
       - name: 安装依赖
         run: |
           cd FundsMonitor
           pip install -q akshare pandas numpy matplotlib seaborn yfinance litellm
-      
-      # 4. 运行完整工作流
+
       - name: 运行完整工作流
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
-          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          TEST_MODE: ${{ github.event.inputs.test_mode || false }}
-          REPORT_TYPE: ${{ github.event.inputs.report_type || 'full' }}
         run: |
-          cd FundsMonitor
-          
-          echo "=========================================="
-          echo "开始生成交易报告"
-          echo "=========================================="
-          echo "报告类型: $REPORT_TYPE"
-          echo "测试模式: $TEST_MODE"
-          echo "=========================================="
-          
-          # 创建输出目录
-          mkdir -p output/charts
-          mkdir -p output/reports
-          
-          # 运行完整工作流
-          
-      # 5. 上传报告
+          python3 .github/scripts/generate_report.py
+
       - name: 上传报告产物
         uses: actions/upload-artifact@v3
         with:
           name: trading-report-${{ github.run_number }}
           path: FundsMonitor/output/
           retention-days: 7
-      
-      # 6. 发送成功通知
+
       - name: 发送成功通知
         if: success()
         run: |
           echo "✅ 交易报告生成成功！"
           echo "报告类型: ${{ github.event.inputs.report_type || 'full' }}"
           echo "产物: trading-report-${{ github.run_number }}"
-      
-      # 7. 发送失败通知
+
       - name: 发送失败通知
         if: failure()
         run: |
