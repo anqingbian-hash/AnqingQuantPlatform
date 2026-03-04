@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       report_type:
-        description: '报告类型'
+        description: 报告类型
         required: false
-        default: 'full'
+        default: full
         type: choice
         options:
           - full
@@ -16,7 +16,7 @@ on:
           - afternoon
           - funding
       test_mode:
-        description: '测试模式（不推送飞书）'
+        description: 测试模式（不推送飞书）
         required: false
         default: false
         type: boolean
@@ -53,12 +53,12 @@ jobs:
       - name: 发送成功通知
         if: success()
         run: |
-          echo "✅ 交易报告生成成功！"
+          echo "交易报告生成成功！"
           echo "报告类型: ${{ github.event.inputs.report_type || 'full' }}"
           echo "产物: trading-report-${{ github.run_number }}"
 
       - name: 发送失败通知
         if: failure()
         run: |
-          echo "❌ 交易报告生成失败！"
+          echo "交易报告生成失败！"
           echo "请检查日志了解详情"
