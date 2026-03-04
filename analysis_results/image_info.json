@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "path": "/root/.openclaw/media/inbound/d26b567e-5226-4f77-8f21-6a4efb71f821.jpg",
+    "filename": "d26b567e-5226-4f77-8f21-6a4efb71f821.jpg",
+    "exists": true,
+    "width": 2560,
+    "height": 1377,
+    "format": "JPEG"
+  },
+  {
+    "id": 2,
+    "path": "/root/.openclaw/media/inbound/36f9f23a-a21a-4d8f-afc2-64767a132d36.jpg",
+    "filename": "36f9f23a-a21a-4d8f-afc2-64767a132d36.jpg",
+    "exists": true,
+    "width": 2560,
+    "height": 1377,
+    "format": "JPEG"
+  },
+  {
+    "id": 3,
+    "path": "/root/.openclaw/media/inbound/dc663f79-16cf-4be9-a98f-5866150f8076.jpg",
+    "filename": "dc663f79-16cf-4be9-a98f-5866150f8076.jpg",
+    "exists": true,
+    "width": 2560,
+    "height": 1377,
+    "format": "JPEG"
+  },
+  {
+    "id": 4,
+    "path": "/root/.openclaw/media/inbound/0bbb9ba2-cc9a-490e-9232-1d94ec9c2e54.jpg",
+    "filename": "0bbb9ba2-cc9a-490e-9232-1d94ec9c2e54.jpg",
+    "exists": true,
+    "width": 2560,
+    "height": 1377,
+    "format": "JPEG"
+  },
+  {
+    "id": 5,
+    "path": "/root/.openclaw/media/inbound/b173264f-fd2a-46eb-accd-215776d44527.jpg",
+    "filename": "b173264f-fd2a-46eb-accd-215776d44527.jpg",
+    "exists": true,
+    "width": 2560,
+    "height": 1377,
+    "format": "JPEG"
+  },
+  {
+    "id": 6,
+    "path": "/root/.openclaw/media/inbound/ecf6f1ef-2167-48e2-89ed-8bf0d7e72264.jpg",
+    "filename": "ecf6f1ef-2167-48e2-89ed-8bf0d7e72264.jpg",
+    "exists": true,
+    "width": 2560,
+    "height": 1377,
+    "format": "JPEG"
+  },
+  {
+    "id": 7,
+    "path": "/root/.openclaw/media/inbound/f77ac0f4-bc1f-4306-91dd-56d3a6e7f4f4.jpg",
+    "filename": "f77ac0f4-bc1f-4306-91dd-56d3a6e7f4f4.jpg",
+    "exists": true,
+    "width": 2560,
+    "height": 1377,
+    "format": "JPEG"
+  }
+]

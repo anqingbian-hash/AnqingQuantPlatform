@@ -1,0 +1,21 @@
+{
+  "image_path": "/root/.openclaw/media/inbound/57337644-f52c-499d-825f-b3cc39322832.jpg",
+  "yellow_boxes": [
+    {
+      "x": 2215,
+      "y": 273,
+      "width": 202,
+      "height": 78,
+      "text": "46.69...",
+      "value": 46.69,
+      "center_y": 312
+    }
+  ],
+  "classified": {
+    "count": 1,
+    "s2": null,
+    "current_price": null,
+    "r2": null
+  },
+  "comparison": {}
+}

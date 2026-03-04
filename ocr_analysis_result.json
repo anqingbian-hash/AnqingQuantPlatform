@@ -1,0 +1,16 @@
+{
+  "image_path": "/root/.openclaw/media/inbound/0c4062f0-7feb-4f68-a145-5a36a5d54e1c.jpg",
+  "main_chart": {},
+  "sub_chart_1": {
+    "value": -5.0,
+    "text": "5\n1 425 4.36. 2\n7\n30\n5 2\n",
+    "is_positive": false
+  },
+  "sub_chart_2": {},
+  "raw_data": {
+    "image_size": {
+      "height": 1377,
+      "width": 2560
+    }
+  }
+}

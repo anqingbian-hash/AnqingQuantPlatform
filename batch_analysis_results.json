@@ -1,0 +1,251 @@
+[
+  {
+    "image_name": "4c346616-9e34-4393-98a6-7ad18166bb88.jpg",
+    "image_size": {
+      "width": 2560,
+      "height": 1377
+    },
+    "support_lines": [],
+    "resistance_lines": [
+      {
+        "x1": 0,
+        "y1": 84,
+        "x2": 2559,
+        "y2": 84,
+        "y": 84,
+        "length": 2559
+      },
+      {
+        "x1": 97,
+        "y1": 127,
+        "x2": 781,
+        "y2": 127,
+        "y": 127,
+        "length": 684
+      }
+    ],
+    "net_volume_analysis": {
+      "net_long": false,
+      "net_short": true,
+      "red_count": 12254,
+      "green_count": 13857
+    },
+    "delta_analysis": {
+      "slope": "down",
+      "curve_detected": true,
+      "top_y": 0,
+      "bottom_y": 369,
+      "centroid_y": 253
+    },
+    "wkf_judgment": {
+      "phase": "派发期",
+      "confidence": 70
+    }
+  },
+  {
+    "image_name": "bd68ec0c-7ef9-46cc-a6a5-9ec681af151a.jpg",
+    "image_size": {
+      "width": 2560,
+      "height": 1377
+    },
+    "support_lines": [
+      {
+        "x1": 51,
+        "y1": 472,
+        "x2": 2557,
+        "y2": 472,
+        "y": 472,
+        "length": 2506
+      }
+    ],
+    "resistance_lines": [
+      {
+        "x1": 0,
+        "y1": 84,
+        "x2": 2559,
+        "y2": 84,
+        "y": 84,
+        "length": 2559
+      },
+      {
+        "x1": 97,
+        "y1": 127,
+        "x2": 781,
+        "y2": 127,
+        "y": 127,
+        "length": 684
+      },
+      {
+        "x1": 54,
+        "y1": 473,
+        "x2": 2518,
+        "y2": 473,
+        "y": 473,
+        "length": 2464
+      }
+    ],
+    "net_volume_analysis": {
+      "net_long": true,
+      "net_short": false,
+      "red_count": 9185,
+      "green_count": 8961
+    },
+    "delta_analysis": {
+      "slope": "down",
+      "curve_detected": true,
+      "top_y": 0,
+      "bottom_y": 369,
+      "centroid_y": 248
+    },
+    "wkf_judgment": {
+      "phase": "拉升期",
+      "confidence": 60
+    }
+  },
+  {
+    "image_name": "22da1809-bc46-425c-a119-df520e144d5a.jpg",
+    "image_size": {
+      "width": 2560,
+      "height": 1377
+    },
+    "support_lines": [],
+    "resistance_lines": [
+      {
+        "x1": 0,
+        "y1": 84,
+        "x2": 2559,
+        "y2": 84,
+        "y": 84,
+        "length": 2559
+      },
+      {
+        "x1": 96,
+        "y1": 129,
+        "x2": 779,
+        "y2": 129,
+        "y": 129,
+        "length": 683
+      }
+    ],
+    "net_volume_analysis": {
+      "net_long": false,
+      "net_short": true,
+      "red_count": 10841,
+      "green_count": 18832
+    },
+    "delta_analysis": {
+      "slope": "down",
+      "curve_detected": true,
+      "top_y": 0,
+      "bottom_y": 369,
+      "centroid_y": 248
+    },
+    "wkf_judgment": {
+      "phase": "派发期",
+      "confidence": 70
+    }
+  },
+  {
+    "image_name": "73c6ceb1-f3d3-4c63-8f1a-763c46a2ebdf.jpg",
+    "image_size": {
+      "width": 2560,
+      "height": 1377
+    },
+    "support_lines": [
+      {
+        "x1": 96,
+        "y1": 130,
+        "x2": 782,
+        "y2": 130,
+        "y": 130,
+        "length": 686
+      },
+      {
+        "x1": 1792,
+        "y1": 560,
+        "x2": 2407,
+        "y2": 560,
+        "y": 560,
+        "length": 615
+      }
+    ],
+    "resistance_lines": [
+      {
+        "x1": 0,
+        "y1": 84,
+        "x2": 2559,
+        "y2": 84,
+        "y": 84,
+        "length": 2559
+      },
+      {
+        "x1": 96,
+        "y1": 129,
+        "x2": 781,
+        "y2": 129,
+        "y": 129,
+        "length": 685
+      }
+    ],
+    "net_volume_analysis": {
+      "net_long": false,
+      "net_short": true,
+      "red_count": 15636,
+      "green_count": 31931
+    },
+    "delta_analysis": {
+      "slope": "down",
+      "curve_detected": true,
+      "top_y": 238,
+      "bottom_y": 318,
+      "centroid_y": 281
+    },
+    "wkf_judgment": {
+      "phase": "震荡期",
+      "confidence": 30
+    }
+  },
+  {
+    "image_name": "af41ac9b-a52f-4d69-af01-d9e47a938bbf.jpg",
+    "image_size": {
+      "width": 2560,
+      "height": 1377
+    },
+    "support_lines": [],
+    "resistance_lines": [
+      {
+        "x1": 0,
+        "y1": 84,
+        "x2": 2559,
+        "y2": 84,
+        "y": 84,
+        "length": 2559
+      },
+      {
+        "x1": 97,
+        "y1": 127,
+        "x2": 781,
+        "y2": 127,
+        "y": 127,
+        "length": 684
+      }
+    ],
+    "net_volume_analysis": {
+      "net_long": false,
+      "net_short": true,
+      "red_count": 8211,
+      "green_count": 11946
+    },
+    "delta_analysis": {
+      "slope": "up",
+      "curve_detected": true,
+      "top_y": 203,
+      "bottom_y": 335,
+      "centroid_y": 255
+    },
+    "wkf_judgment": {
+      "phase": "派发期",
+      "confidence": 70
+    }
+  }
+]

@@ -1,0 +1,507 @@
+[
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "color_samples": {
+      "white_r2": {
+        "mean": [
+          250,
+          252,
+          250
+        ],
+        "std": [
+          9,
+          7,
+          8
+        ],
+        "count": 3822
+      },
+      "green_s2": {
+        "mean": [
+          9,
+          127,
+          8
+        ],
+        "std": [
+          15,
+          20,
+          14
+        ],
+        "count": 17732
+      }
+    },
+    "sr_lines": {
+      "r2_lines": [],
+      "s2_lines": [
+        {
+          "y": 490,
+          "pixel_count": 21165,
+          "green_ratio": 8.267578125
+        },
+        {
+          "y": 507,
+          "pixel_count": 20145,
+          "green_ratio": 7.869140625
+        },
+        {
+          "y": 531,
+          "pixel_count": 20400,
+          "green_ratio": 7.96875
+        },
+        {
+          "y": 532,
+          "pixel_count": 20655,
+          "green_ratio": 8.068359375
+        },
+        {
+          "y": 536,
+          "pixel_count": 21165,
+          "green_ratio": 8.267578125
+        },
+        {
+          "y": 537,
+          "pixel_count": 21165,
+          "green_ratio": 8.267578125
+        },
+        {
+          "y": 567,
+          "pixel_count": 20910,
+          "green_ratio": 8.16796875
+        },
+        {
+          "y": 568,
+          "pixel_count": 20655,
+          "green_ratio": 8.068359375
+        },
+        {
+          "y": 569,
+          "pixel_count": 20910,
+          "green_ratio": 8.16796875
+        },
+        {
+          "y": 570,
+          "pixel_count": 20400,
+          "green_ratio": 7.96875
+        }
+      ],
+      "r2_count": 0,
+      "s2_count": 10
+    },
+    "sr_prices": {
+      "s2_y": 490,
+      "s2_price": 16.25,
+      "current_price": 17.99
+    },
+    "manual_data": {
+      "r2": 19.2,
+      "s2": 16.25,
+      "current_price": 17.99
+    },
+    "period": "周线"
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/437746cd-65be-4603-938c-85debf232d94.jpg",
+    "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+    "color_samples": {
+      "white_r2": {
+        "mean": [
+          249,
+          251,
+          250
+        ],
+        "std": [
+          9,
+          6,
+          8
+        ],
+        "count": 4823
+      },
+      "green_s2": {
+        "mean": [
+          10,
+          125,
+          8
+        ],
+        "std": [
+          15,
+          16,
+          13
+        ],
+        "count": 13397
+      }
+    },
+    "sr_lines": {
+      "r2_lines": [],
+      "s2_lines": [
+        {
+          "y": 296,
+          "pixel_count": 17085,
+          "green_ratio": 6.673828125
+        },
+        {
+          "y": 301,
+          "pixel_count": 16575,
+          "green_ratio": 6.474609375
+        },
+        {
+          "y": 308,
+          "pixel_count": 19125,
+          "green_ratio": 7.470703125
+        },
+        {
+          "y": 309,
+          "pixel_count": 18870,
+          "green_ratio": 7.37109375
+        },
+        {
+          "y": 356,
+          "pixel_count": 17085,
+          "green_ratio": 6.673828125
+        },
+        {
+          "y": 357,
+          "pixel_count": 17085,
+          "green_ratio": 6.673828125
+        },
+        {
+          "y": 470,
+          "pixel_count": 16830,
+          "green_ratio": 6.57421875
+        },
+        {
+          "y": 471,
+          "pixel_count": 17340,
+          "green_ratio": 6.7734375
+        },
+        {
+          "y": 476,
+          "pixel_count": 17085,
+          "green_ratio": 6.673828125
+        },
+        {
+          "y": 477,
+          "pixel_count": 17340,
+          "green_ratio": 6.7734375
+        }
+      ],
+      "r2_count": 0,
+      "s2_count": 10
+    },
+    "sr_prices": {
+      "s2_y": 296,
+      "s2_price": 15.61,
+      "current_price": 17.99
+    },
+    "manual_data": {
+      "r2": 18.13,
+      "s2": 15.61,
+      "current_price": 17.99
+    },
+    "period": "日线"
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "color_samples": {
+      "white_r2": {
+        "mean": [
+          250,
+          252,
+          251
+        ],
+        "std": [
+          9,
+          6,
+          7
+        ],
+        "count": 3580
+      },
+      "green_s2": {
+        "mean": [
+          8,
+          127,
+          6
+        ],
+        "std": [
+          14,
+          18,
+          13
+        ],
+        "count": 19579
+      }
+    },
+    "sr_lines": {
+      "r2_lines": [],
+      "s2_lines": [
+        {
+          "y": 514,
+          "pixel_count": 23205,
+          "green_ratio": 9.064453125
+        },
+        {
+          "y": 515,
+          "pixel_count": 23715,
+          "green_ratio": 9.263671875
+        },
+        {
+          "y": 516,
+          "pixel_count": 23460,
+          "green_ratio": 9.1640625
+        },
+        {
+          "y": 559,
+          "pixel_count": 23460,
+          "green_ratio": 9.1640625
+        },
+        {
+          "y": 560,
+          "pixel_count": 26010,
+          "green_ratio": 10.16015625
+        },
+        {
+          "y": 561,
+          "pixel_count": 26775,
+          "green_ratio": 10.458984375
+        },
+        {
+          "y": 562,
+          "pixel_count": 27030,
+          "green_ratio": 10.55859375
+        },
+        {
+          "y": 563,
+          "pixel_count": 27285,
+          "green_ratio": 10.658203125
+        },
+        {
+          "y": 564,
+          "pixel_count": 27030,
+          "green_ratio": 10.55859375
+        },
+        {
+          "y": 565,
+          "pixel_count": 26265,
+          "green_ratio": 10.259765625
+        }
+      ],
+      "r2_count": 0,
+      "s2_count": 10
+    },
+    "sr_prices": {
+      "s2_y": 514,
+      "s2_price": 16.25,
+      "current_price": 17.99
+    },
+    "manual_data": {
+      "r2": 19.36,
+      "s2": 16.25,
+      "current_price": 17.99
+    },
+    "period": "1小时"
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "color_samples": {
+      "white_r2": {
+        "mean": [
+          249,
+          251,
+          249
+        ],
+        "std": [
+          9,
+          8,
+          9
+        ],
+        "count": 3088
+      },
+      "green_s2": {
+        "mean": [
+          6,
+          125,
+          5
+        ],
+        "std": [
+          10,
+          11,
+          11
+        ],
+        "count": 21686
+      }
+    },
+    "sr_lines": {
+      "r2_lines": [],
+      "s2_lines": [
+        {
+          "y": 542,
+          "pixel_count": 28815,
+          "green_ratio": 11.255859375
+        },
+        {
+          "y": 543,
+          "pixel_count": 29070,
+          "green_ratio": 11.35546875
+        },
+        {
+          "y": 561,
+          "pixel_count": 29835,
+          "green_ratio": 11.654296875
+        },
+        {
+          "y": 562,
+          "pixel_count": 29835,
+          "green_ratio": 11.654296875
+        },
+        {
+          "y": 563,
+          "pixel_count": 29580,
+          "green_ratio": 11.5546875
+        },
+        {
+          "y": 582,
+          "pixel_count": 32640,
+          "green_ratio": 12.75
+        },
+        {
+          "y": 583,
+          "pixel_count": 31110,
+          "green_ratio": 12.15234375
+        },
+        {
+          "y": 584,
+          "pixel_count": 30090,
+          "green_ratio": 11.75390625
+        },
+        {
+          "y": 585,
+          "pixel_count": 29835,
+          "green_ratio": 11.654296875
+        },
+        {
+          "y": 586,
+          "pixel_count": 29835,
+          "green_ratio": 11.654296875
+        }
+      ],
+      "r2_count": 0,
+      "s2_count": 10
+    },
+    "sr_prices": {
+      "s2_y": 542,
+      "s2_price": 17.33,
+      "current_price": 17.99
+    },
+    "manual_data": {
+      "r2": 18.13,
+      "s2": 17.33,
+      "current_price": 17.99
+    },
+    "period": "15分钟"
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "color_samples": {
+      "white_r2": {
+        "mean": [
+          249,
+          251,
+          250
+        ],
+        "std": [
+          9,
+          7,
+          8
+        ],
+        "count": 2368
+      },
+      "green_s2": {
+        "mean": [
+          8,
+          123,
+          7
+        ],
+        "std": [
+          12,
+          7,
+          13
+        ],
+        "count": 12519
+      }
+    },
+    "sr_lines": {
+      "r2_lines": [],
+      "s2_lines": [
+        {
+          "y": 279,
+          "pixel_count": 15300,
+          "green_ratio": 5.9765625
+        },
+        {
+          "y": 280,
+          "pixel_count": 13770,
+          "green_ratio": 5.37890625
+        },
+        {
+          "y": 290,
+          "pixel_count": 14280,
+          "green_ratio": 5.578125
+        },
+        {
+          "y": 291,
+          "pixel_count": 16320,
+          "green_ratio": 6.375
+        },
+        {
+          "y": 302,
+          "pixel_count": 16320,
+          "green_ratio": 6.375
+        },
+        {
+          "y": 600,
+          "pixel_count": 13515,
+          "green_ratio": 5.279296875
+        },
+        {
+          "y": 601,
+          "pixel_count": 15555,
+          "green_ratio": 6.076171875
+        },
+        {
+          "y": 602,
+          "pixel_count": 15300,
+          "green_ratio": 5.9765625
+        },
+        {
+          "y": 603,
+          "pixel_count": 15300,
+          "green_ratio": 5.9765625
+        },
+        {
+          "y": 604,
+          "pixel_count": 15555,
+          "green_ratio": 6.076171875
+        }
+      ],
+      "r2_count": 0,
+      "s2_count": 10
+    },
+    "sr_prices": {
+      "s2_y": 279,
+      "s2_price": 17.89,
+      "current_price": 17.99
+    },
+    "manual_data": {
+      "r2": 17.99,
+      "s2": 17.89,
+      "current_price": 17.99
+    },
+    "period": "5分钟"
+  }
+]

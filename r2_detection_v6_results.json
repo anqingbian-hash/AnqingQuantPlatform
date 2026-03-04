@@ -1,0 +1,12 @@
+[
+  {
+    "period": "周线",
+    "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "detected": true,
+    "edge_count": 60276,
+    "lines_detected": 402,
+    "valid_horizontal_lines": 288,
+    "top_candidates": [
+      {
+        "y": 87,
+        "length": 

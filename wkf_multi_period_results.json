@@ -1,0 +1,749 @@
+[
+  {
+    "stock_id": 1,
+    "analysis": {
+      "stock_analysis": {
+        "period_results": [
+          {
+            "period": "weekly",
+            "image_path": "/root/.openclaw/media/inbound/9595c64f-894e-47cc-a85e-b4a5136585fb.jpg",
+            "image_name": "9595c64f-894e-47cc-a85e-b4a5136585fb.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 7462,
+              "green_count": 288,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 73523,
+              "green_count": 1027
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "daily",
+            "image_path": "/root/.openclaw/media/inbound/e9ff57b4-f738-4dcd-b792-fb57b70505fd.jpg",
+            "image_name": "e9ff57b4-f738-4dcd-b792-fb57b70505fd.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 8073,
+              "green_count": 285,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 71803,
+              "green_count": 1009
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "hourly",
+            "image_path": "/root/.openclaw/media/inbound/ef91c104-9e7d-4aca-b934-16065bd8ad17.jpg",
+            "image_name": "ef91c104-9e7d-4aca-b934-16065bd8ad17.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 7087,
+              "green_count": 479,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 67327,
+              "green_count": 1141
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "15min",
+            "image_path": "/root/.openclaw/media/inbound/62ed1bec-88b3-4385-a00d-06262066d947.jpg",
+            "image_name": "62ed1bec-88b3-4385-a00d-06262066d947.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 4970,
+              "green_count": 2,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 68708,
+              "green_count": 1030
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "5min",
+            "image_path": "/root/.openclaw/media/inbound/d18e2c81-facd-403b-89a1-9097e62d33b6.jpg",
+            "image_name": "d18e2c81-facd-403b-89a1-9097e62d33b6.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 5885,
+              "green_count": 15,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 68674,
+              "green_count": 1072
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          }
+        ],
+        "resonance_score": {
+          "total_score": 100,
+          "max_score": 100,
+          "valid_periods": [
+            "weekly",
+            "daily",
+            "hourly",
+            "15min",
+            "5min"
+          ],
+          "distribution_periods": [],
+          "resonance_type": "high",
+          "signal_validity": "valid",
+          "period_scores": [
+            {
+              "period": "weekly",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "daily",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "hourly",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "15min",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "5min",
+              "score": 20,
+              "phase": "markup"
+            }
+          ]
+        },
+        "first_law_check": {
+          "triggered": false,
+          "rule": "无",
+          "reason": "未触发",
+          "recommendation": "正常分析",
+          "valid_periods": [
+            "weekly",
+            "daily",
+            "hourly",
+            "15min",
+            "5min"
+          ]
+        },
+        "final_recommendation": {
+          "trading_signal": "long",
+          "position_size": 12,
+          "entry_zone": "等待回踩SR线后入场",
+          "stop_loss": null,
+          "take_profit": null,
+          "risk_level": "medium",
+          "risk_warning": [
+            "高确定性全共振（100分）",
+            "止损位设为最近S2支撑线下方，跌破无条件离场"
+          ],
+          "action_plan": [
+            "等待回踩后做多单",
+            "严格止损，不扛单"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "stock_id": 2,
+    "analysis": {
+      "stock_analysis": {
+        "period_results": [
+          {
+            "period": "weekly",
+            "image_path": "/root/.openclaw/media/inbound/753d9e92-3070-4a89-88dd-6def6e8e543c.jpg",
+            "image_name": "753d9e92-3070-4a89-88dd-6def6e8e543c.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 7462,
+              "green_count": 288,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 73523,
+              "green_count": 1027
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "daily",
+            "image_path": "/root/.openclaw/media/inbound/19f178cc-d9f4-4cc9-b9e3-c7284fcaeeb4.jpg",
+            "image_name": "19f178cc-d9f4-4cc9-b9e3-c7284fcaeeb4.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 8073,
+              "green_count": 285,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 71803,
+              "green_count": 1009
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "hourly",
+            "image_path": "/root/.openclaw/media/inbound/bb021ec8-2284-420e-bc8a-071d846f44e6.jpg",
+            "image_name": "bb021ec8-2284-420e-bc8a-071d846f44e6.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 7087,
+              "green_count": 479,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 67327,
+              "green_count": 1141
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "15min",
+            "image_path": "/root/.openclaw/media/inbound/33f51085-22f2-494d-ab9d-a349324ca5c8.jpg",
+            "image_name": "33f51085-22f2-494d-ab9d-a349324ca5c8.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 4970,
+              "green_count": 2,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 68708,
+              "green_count": 1030
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "5min",
+            "image_path": "/root/.openclaw/media/inbound/d3b66f9a-005f-4a53-8029-6d894692ab2a.jpg",
+            "image_name": "d3b66f9a-005f-4a53-8029-6d894692ab2a.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 5885,
+              "green_count": 15,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 68674,
+              "green_count": 1072
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          }
+        ],
+        "resonance_score": {
+          "total_score": 100,
+          "max_score": 100,
+          "valid_periods": [
+            "weekly",
+            "daily",
+            "hourly",
+            "15min",
+            "5min"
+          ],
+          "distribution_periods": [],
+          "resonance_type": "high",
+          "signal_validity": "valid",
+          "period_scores": [
+            {
+              "period": "weekly",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "daily",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "hourly",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "15min",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "5min",
+              "score": 20,
+              "phase": "markup"
+            }
+          ]
+        },
+        "first_law_check": {
+          "triggered": false,
+          "rule": "无",
+          "reason": "未触发",
+          "recommendation": "正常分析",
+          "valid_periods": [
+            "weekly",
+            "daily",
+            "hourly",
+            "15min",
+            "5min"
+          ]
+        },
+        "final_recommendation": {
+          "trading_signal": "long",
+          "position_size": 12,
+          "entry_zone": "等待回踩SR线后入场",
+          "stop_loss": null,
+          "take_profit": null,
+          "risk_level": "medium",
+          "risk_warning": [
+            "高确定性全共振（100分）",
+            "止损位设为最近S2支撑线下方，跌破无条件离场"
+          ],
+          "action_plan": [
+            "等待回踩后做多单",
+            "严格止损，不扛单"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "stock_id": 3,
+    "analysis": {
+      "stock_analysis": {
+        "period_results": [
+          {
+            "period": "weekly",
+            "image_path": "/root/.openclaw/media/inbound/9d473172-57e1-4b79-82e0-1ed24eeb446c.jpg",
+            "image_name": "9d473172-57e1-4b79-82e0-1ed24eeb446c.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 6382,
+              "green_count": 11,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 69494,
+              "green_count": 600
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "daily",
+            "image_path": "/root/.openclaw/media/inbound/0fd9b2e6-cc12-4597-9a96-c909ba713120.jpg",
+            "image_name": "0fd9b2e6-cc12-4597-9a96-c909ba713120.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 3334,
+              "green_count": 0,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 70097,
+              "green_count": 662
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "hourly",
+            "image_path": "/root/.openclaw/media/inbound/42aebf5f-b3a9-4898-92e0-7388b886afc9.jpg",
+            "image_name": "42aebf5f-b3a9-4898-92e0-7388b886afc9.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 3587,
+              "green_count": 1,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 73429,
+              "green_count": 1188
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "15min",
+            "image_path": "/root/.openclaw/media/inbound/b0b69a8d-1e46-43a1-8c08-3d46d3cbf634.jpg",
+            "image_name": "b0b69a8d-1e46-43a1-8c08-3d46d3cbf634.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 5477,
+              "green_count": 14,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 66471,
+              "green_count": 855
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          },
+          {
+            "period": "5min",
+            "image_path": "/root/.openclaw/media/inbound/8ef5d705-683b-455e-b679-5719aaea06d9.jpg",
+            "image_name": "8ef5d705-683b-455e-b679-5719aaea06d9.jpg",
+            "sr_lines": {
+              "support_lines": [],
+              "resistance_lines": [],
+              "support_count": 0,
+              "resistance_count": 0
+            },
+            "net_volume": {
+              "red_count": 5809,
+              "green_count": 12,
+              "net_long": true,
+              "net_short": false
+            },
+            "delta": {
+              "slope": "up",
+              "has_curve": true,
+              "red_count": 70283,
+              "green_count": 910
+            },
+            "wkf_judgment": {
+              "phase": "markup",
+              "confidence": 80,
+              "signal": "long"
+            },
+            "score": 20,
+            "recommendations": {
+              "trading_signal": "long",
+              "position_size": 12,
+              "risk_level": "medium"
+            }
+          }
+        ],
+        "resonance_score": {
+          "total_score": 100,
+          "max_score": 100,
+          "valid_periods": [
+            "weekly",
+            "daily",
+            "hourly",
+            "15min",
+            "5min"
+          ],
+          "distribution_periods": [],
+          "resonance_type": "high",
+          "signal_validity": "valid",
+          "period_scores": [
+            {
+              "period": "weekly",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "daily",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "hourly",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "15min",
+              "score": 20,
+              "phase": "markup"
+            },
+            {
+              "period": "5min",
+              "score": 20,
+              "phase": "markup"
+            }
+          ]
+        },
+        "first_law_check": {
+          "triggered": false,
+          "rule": "无",
+          "reason": "未触发",
+          "recommendation": "正常分析",
+          "valid_periods": [
+            "weekly",
+            "daily",
+            "hourly",
+            "15min",
+            "5min"
+          ]
+        },
+        "final_recommendation": {
+          "trading_signal": "long",
+          "position_size": 12,
+          "entry_zone": "等待回踩SR线后入场",
+          "stop_loss": null,
+          "take_profit": null,
+          "risk_level": "medium",
+          "risk_warning": [
+            "高确定性全共振（100分）",
+            "止损位设为最近S2支撑线下方，跌破无条件离场"
+          ],
+          "action_plan": [
+            "等待回踩后做多单",
+            "严格止损，不扛单"
+          ]
+        }
+      }
+    }
+  }
+]

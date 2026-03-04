@@ -1,0 +1,37 @@
+{
+  "manual_annotation": {
+    "S2": 8.48,
+    "current_price": 15.69,
+    "R2": 17.58,
+    "high_price": 20.1
+  },
+  "ocr_result": {
+    "image_path": "/root/.openclaw/media/inbound/92ea67d8-5897-401a-825a-63df2f39ee75.jpg",
+    "image_size": {
+      "width": 2560,
+      "height": 1377
+    },
+    "main_chart": {
+      "support_lines": [],
+      "resistance_lines": [],
+      "annotations": []
+    },
+    "sub_chart_1": {
+      "value": null,
+      "is_positive": null,
+      "text": "-0.-70-1-00--0 3 ."
+    },
+    "sub_chart_2": {
+      "slope": "flat",
+      "curve_detected": true
+    },
+    "summary": {
+      "delta_slope": "flat"
+    }
+  },
+  "comparison": {
+    "S2_found": false,
+    "R2_found": false,
+    "current_price_found": false
+  }
+}

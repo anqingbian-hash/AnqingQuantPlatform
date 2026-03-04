@@ -1,0 +1,13 @@
+[
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/9595c64f-894e-47cc-a85e-b4a5136585fb.jpg",
+    "image_name": "9595c64f-894e-47cc-a85e-b4a5136585fb.jpg",
+    "sr_lines": {
+      "support_lines": [],
+      "resistance_lines": [],
+      "support_count": 0,
+      "resistance_count": 0
+    },
+    "net_volume": {
+      "red_count": 

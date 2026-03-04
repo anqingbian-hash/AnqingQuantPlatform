@@ -1,0 +1,62 @@
+[
+  {
+    "period": "周线",
+    "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "success": true,
+    "detected": false,
+    "white_count": 15492,
+    "white_ratio": 0.009776352988691438,
+    "edge_count": 14203,
+    "lines_detected": 23,
+    "resistance_lines": [],
+    "r2_line": null
+  },
+  {
+    "period": "日线",
+    "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+    "success": true,
+    "detected": false,
+    "white_count": 16684,
+    "white_ratio": 0.010528574313408723,
+    "edge_count": 14937,
+    "lines_detected": 25,
+    "resistance_lines": [],
+    "r2_line": null
+  },
+  {
+    "period": "1小时",
+    "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "success": true,
+    "detected": false,
+    "white_count": 15358,
+    "white_ratio": 0.009691791195476576,
+    "edge_count": 13862,
+    "lines_detected": 22,
+    "resistance_lines": [],
+    "r2_line": null
+  },
+  {
+    "period": "15分钟",
+    "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "success": true,
+    "detected": false,
+    "white_count": 14832,
+    "white_ratio": 0.009359854604200323,
+    "edge_count": 13098,
+    "lines_detected": 21,
+    "resistance_lines": [],
+    "r2_line": null
+  },
+  {
+    "period": "5分钟",
+    "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "success": true,
+    "detected": false,
+    "white_count": 14071,
+    "white_ratio": 0.008879619345718901,
+    "edge_count": 11769,
+    "lines_detected": 24,
+    "resistance_lines": [],
+    "r2_line": null
+  }
+]

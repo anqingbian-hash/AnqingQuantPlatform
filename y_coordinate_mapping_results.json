@@ -1,0 +1,427 @@
+[
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "r2_lines": [
+      {
+        "y": 227,
+        "pixel_count": 38505,
+        "color_type": "white"
+      },
+      {
+        "y": 603,
+        "pixel_count": 39525,
+        "color_type": "white"
+      },
+      {
+        "y": 441,
+        "pixel_count": 100215,
+        "color_type": "white"
+      },
+      {
+        "y": 457,
+        "pixel_count": 148920,
+        "color_type": "white"
+      },
+      {
+        "y": 207,
+        "pixel_count": 151725,
+        "color_type": "white"
+      }
+    ],
+    "s2_lines": [
+      {
+        "y": 131,
+        "pixel_count": 1785,
+        "color_type": "yellow"
+      },
+      {
+        "y": 126,
+        "pixel_count": 1785,
+        "color_type": "yellow"
+      },
+      {
+        "y": 128,
+        "pixel_count": 2040,
+        "color_type": "yellow"
+      },
+      {
+        "y": 125,
+        "pixel_count": 2040,
+        "color_type": "yellow"
+      },
+      {
+        "y": 122,
+        "pixel_count": 3570,
+        "color_type": "yellow"
+      }
+    ],
+    "current_price_lines": [
+      {
+        "y": 122,
+        "pixel_count": 3570,
+        "color_type": "yellow"
+      }
+    ],
+    "mapping": {
+      "r2": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "s2": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "current_price": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "manual_annotation": null,
+      "calibration_points": []
+    }
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/437746cd-65be-4603-938c-85debf232d94.jpg",
+    "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+    "r2_lines": [
+      {
+        "y": 302,
+        "pixel_count": 54570,
+        "color_type": "white"
+      },
+      {
+        "y": 275,
+        "pixel_count": 64260,
+        "color_type": "white"
+      },
+      {
+        "y": 230,
+        "pixel_count": 65025,
+        "color_type": "white"
+      },
+      {
+        "y": 295,
+        "pixel_count": 94860,
+        "color_type": "white"
+      },
+      {
+        "y": 306,
+        "pixel_count": 121635,
+        "color_type": "white"
+      }
+    ],
+    "s2_lines": [
+      {
+        "y": 126,
+        "pixel_count": 1785,
+        "color_type": "yellow"
+      },
+      {
+        "y": 127,
+        "pixel_count": 1785,
+        "color_type": "yellow"
+      },
+      {
+        "y": 125,
+        "pixel_count": 2040,
+        "color_type": "yellow"
+      },
+      {
+        "y": 128,
+        "pixel_count": 2040,
+        "color_type": "yellow"
+      },
+      {
+        "y": 122,
+        "pixel_count": 3570,
+        "color_type": "yellow"
+      }
+    ],
+    "current_price_lines": [
+      {
+        "y": 122,
+        "pixel_count": 3570,
+        "color_type": "yellow"
+      }
+    ],
+    "mapping": {
+      "r2": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "s2": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "current_price": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "manual_annotation": null,
+      "calibration_points": []
+    }
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "r2_lines": [
+      {
+        "y": 475,
+        "pixel_count": 42330,
+        "color_type": "white"
+      },
+      {
+        "y": 383,
+        "pixel_count": 44115,
+        "color_type": "white"
+      },
+      {
+        "y": 493,
+        "pixel_count": 56610,
+        "color_type": "white"
+      },
+      {
+        "y": 227,
+        "pixel_count": 69615,
+        "color_type": "white"
+      },
+      {
+        "y": 445,
+        "pixel_count": 86955,
+        "color_type": "white"
+      }
+    ],
+    "s2_lines": [
+      {
+        "y": 126,
+        "pixel_count": 1785,
+        "color_type": "yellow"
+      },
+      {
+        "y": 131,
+        "pixel_count": 1785,
+        "color_type": "yellow"
+      },
+      {
+        "y": 128,
+        "pixel_count": 2040,
+        "color_type": "yellow"
+      },
+      {
+        "y": 125,
+        "pixel_count": 2040,
+        "color_type": "yellow"
+      },
+      {
+        "y": 122,
+        "pixel_count": 3570,
+        "color_type": "yellow"
+      }
+    ],
+    "current_price_lines": [
+      {
+        "y": 122,
+        "pixel_count": 3570,
+        "color_type": "yellow"
+      }
+    ],
+    "mapping": {
+      "r2": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "s2": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "current_price": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "manual_annotation": null,
+      "calibration_points": []
+    }
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "r2_lines": [
+      {
+        "y": 133,
+        "pixel_count": 8670,
+        "color_type": "white"
+      },
+      {
+        "y": 514,
+        "pixel_count": 42330,
+        "color_type": "white"
+      },
+      {
+        "y": 520,
+        "pixel_count": 94095,
+        "color_type": "white"
+      },
+      {
+        "y": 390,
+        "pixel_count": 100215,
+        "color_type": "white"
+      },
+      {
+        "y": 562,
+        "pixel_count": 112965,
+        "color_type": "white"
+      }
+    ],
+    "s2_lines": [
+      {
+        "y": 127,
+        "pixel_count": 1785,
+        "color_type": "yellow"
+      },
+      {
+        "y": 126,
+        "pixel_count": 1785,
+        "color_type": "yellow"
+      },
+      {
+        "y": 125,
+        "pixel_count": 2040,
+        "color_type": "yellow"
+      },
+      {
+        "y": 128,
+        "pixel_count": 2040,
+        "color_type": "yellow"
+      },
+      {
+        "y": 122,
+        "pixel_count": 3570,
+        "color_type": "yellow"
+      }
+    ],
+    "current_price_lines": [
+      {
+        "y": 122,
+        "pixel_count": 3570,
+        "color_type": "yellow"
+      }
+    ],
+    "mapping": {
+      "r2": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "s2": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "current_price": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "manual_annotation": null,
+      "calibration_points": []
+    }
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "r2_lines": [
+      {
+        "y": 123,
+        "pixel_count": 8160,
+        "color_type": "white"
+      },
+      {
+        "y": 133,
+        "pixel_count": 8925,
+        "color_type": "white"
+      },
+      {
+        "y": 559,
+        "pixel_count": 55335,
+        "color_type": "white"
+      },
+      {
+        "y": 493,
+        "pixel_count": 88230,
+        "color_type": "white"
+      },
+      {
+        "y": 225,
+        "pixel_count": 113220,
+        "color_type": "white"
+      }
+    ],
+    "s2_lines": [
+      {
+        "y": 130,
+        "pixel_count": 1785,
+        "color_type": "yellow"
+      },
+      {
+        "y": 131,
+        "pixel_count": 1785,
+        "color_type": "yellow"
+      },
+      {
+        "y": 125,
+        "pixel_count": 2040,
+        "color_type": "yellow"
+      },
+      {
+        "y": 128,
+        "pixel_count": 2040,
+        "color_type": "yellow"
+      },
+      {
+        "y": 122,
+        "pixel_count": 3570,
+        "color_type": "yellow"
+      }
+    ],
+    "current_price_lines": [
+      {
+        "y": 122,
+        "pixel_count": 3570,
+        "color_type": "yellow"
+      }
+    ],
+    "mapping": {
+      "r2": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "s2": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "current_price": {
+        "y": null,
+        "price": null,
+        "detected": false
+      },
+      "manual_annotation": null,
+      "calibration_points": []
+    }
+  }
+]

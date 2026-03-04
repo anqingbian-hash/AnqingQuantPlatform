@@ -342,14 +342,60 @@ def selector():
 @app.route('/api/stock_info/<symbol>')
 def stock_info(symbol):
     """股票基本信息"""
-    stock_db = {
-        '300750': {'name': '宁德时代', 'sector': '电气设备', 'price': 340.22, 'pct_chg': 2.35, 'score': 91.5},
-        '600519': {'name': '贵州茅台', 'sector': '食品饮料', 'price': 1440.00, 'pct_chg': -0.85, 'score': 89.3},
-        '000977': {'name': '浪潮信息', 'sector': '计算机', 'price': 28.56, 'pct_chg': 3.42, 'score': 90.8},
-        '002496': {'name': '中科曙光', 'sector': '计算机', 'price': 35.67, 'pct_chg': 4.18, 'score': 88.9},
-        '000858': {'name': '五粮液', 'sector': '食品饮料', 'price': 158.32, 'pct_chg': -0.45, 'score': 87.6},
-        '002594': {'name': '比亚迪', 'sector': '汽车', 'price': 198.50, 'pct_chg': 1.23, 'score': 86.7}
+    # 配置Tushare Pro Token
+    import os
+    os.environ['TUSHARE_TOKEN'] = '8b159caa2bbf554707c20c3f44fea1e0e6ec75b6afc82c78fa47e47b'
+
+    # 使用Tushare Pro增强数据源
+    from modules.tushare_pro_enhanced import TushareProEnhanced
+
+    tushare = TushareProEnhanced()
+
+    # 获取股票信息（使用Tushare Pro增强数据）
+    stock_db = {}
+    mock_scores = {
+        '300750': 91.5,
+        '600519': 89.3,
+        '000977': 90.8,
+        '002496': 42.3,
+        '000858': 87.6,
+        '002594': 86.7
     }
+
+    for code, score in mock_scores.items():
+        # 获取综合数据
+        comprehensive = tushare.get_comprehensive_data(code)
+
+        if comprehensive and comprehensive['quote']:
+            quote = comprehensive['quote']
+            daily_basic = comprehensive.get('daily_basic', {})
+
+            stock_db[code] = {
+                'name': comprehensive['name'],
+                'sector': comprehensive['industry'],
+                'price': quote['close'],
+                'pct_chg': quote['pct_chg'],
+                'score': score,
+                'data_source': 'tushare_pro',
+                'pe': daily_basic.get('pe', 0),
+                'pb': daily_basic.get('pb', 0),
+                'turnover_rate': daily_basic.get('turnover_rate', 0),
+                'roe': comprehensive['financial']['roe'] if comprehensive.get('financial') else 0,
+            }
+        else:
+            # 查询失败，使用默认值
+            stock_db[code] = {
+                'name': '未知',
+                'sector': '未知',
+                'price': 0,
+                'pct_chg': 0,
+                'score': score,
+                'data_source': 'none',
+                'pe': 0,
+                'pb': 0,
+                'turnover_rate': 0,
+                'roe': 0
+            }
     
     stock = stock_db.get(symbol, None)
     if stock:
@@ -397,7 +443,7 @@ def cases_list():
             'profit': 9.47
         },
         {
-            'id': 'case_002496',
+            'id': 'case_603019',
             'name': '中科曙光',
             'sector': '计算机',
             'theme': 'AI芯片',

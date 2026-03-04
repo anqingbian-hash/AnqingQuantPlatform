@@ -1,0 +1,204 @@
+[
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "pattern": "sc",
+    "price_analysis": {
+      "current_price_y": 122,
+      "low_edge_count": 22095,
+      "lower_region_ratio": 0.3,
+      "price_position_ratio": 0.19709208400646203
+    },
+    "net_volume_analysis": {
+      "red_count": 4340,
+      "green_count": 6350,
+      "total_count": 10690,
+      "net_long_ratio": 0.4059869036482694,
+      "net_short_ratio": 0.5940130963517306,
+      "net_short": true,
+      "volume_spike": false,
+      "spike_ratio": 1.4627965906473164
+    },
+    "delta_analysis": {
+      "has_curve": true,
+      "slope": "up",
+      "accelerating": true,
+      "red_count": 73583,
+      "green_count": 1203,
+      "curve_count": 297
+    },
+    "detected": false,
+    "confidence": 50,
+    "description": "SC（卖出密集区）-未检测到",
+    "risk_warning": null,
+    "signals": [
+      "价格跌破近期低点（下部区域低点密集）",
+      "净量净空（但未达爆发水平）"
+    ],
+    "action_plan": null
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/437746cd-65be-4603-938c-85debf232d94.jpg",
+    "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+    "pattern": "sc",
+    "price_analysis": {
+      "current_price_y": 122,
+      "low_edge_count": 13522,
+      "lower_region_ratio": 0.3,
+      "price_position_ratio": 0.19709208400646203
+    },
+    "net_volume_analysis": {
+      "red_count": 4137,
+      "green_count": 1123,
+      "total_count": 5260,
+      "net_long_ratio": 0.7865019011406844,
+      "net_short_ratio": 0.2134980988593156,
+      "net_short": false,
+      "volume_spike": false,
+      "spike_ratio": 0.2713871435476075
+    },
+    "delta_analysis": {
+      "has_curve": true,
+      "slope": "up",
+      "accelerating": true,
+      "red_count": 66645,
+      "green_count": 1031,
+      "curve_count": 357
+    },
+    "detected": false,
+    "confidence": 30,
+    "description": "SC（卖出密集区）-未检测到",
+    "risk_warning": null,
+    "signals": [
+      "价格跌破近期低点（下部区域低点密集）"
+    ],
+    "action_plan": null
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "pattern": "sc",
+    "price_analysis": {
+      "current_price_y": 122,
+      "low_edge_count": 25743,
+      "lower_region_ratio": 0.3,
+      "price_position_ratio": 0.19709208400646203
+    },
+    "net_volume_analysis": {
+      "red_count": 5475,
+      "green_count": 12952,
+      "total_count": 18427,
+      "net_long_ratio": 0.29711835892983124,
+      "net_short_ratio": 0.7028816410701688,
+      "net_short": true,
+      "volume_spike": true,
+      "spike_ratio": 2.365230094959825
+    },
+    "delta_analysis": {
+      "has_curve": true,
+      "slope": "up",
+      "accelerating": true,
+      "red_count": 74036,
+      "green_count": 1316,
+      "curve_count": 379
+    },
+    "detected": true,
+    "confidence": 70,
+    "description": "SC（卖出密集区），短期低点，别追空",
+    "risk_warning": "SC形态：短期低点，考虑反弹，不建议追空",
+    "signals": [
+      "价格跌破近期低点（下部区域低点密集）",
+      "净量爆发（做空/做多比=2.37）"
+    ],
+    "action_plan": [
+      "观望，等待价格反弹",
+      "若反弹确认后再考虑做空",
+      "严格止损，不扛单"
+    ]
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "pattern": "sc",
+    "price_analysis": {
+      "current_price_y": 122,
+      "low_edge_count": 25559,
+      "lower_region_ratio": 0.3,
+      "price_position_ratio": 0.19709208400646203
+    },
+    "net_volume_analysis": {
+      "red_count": 6347,
+      "green_count": 19708,
+      "total_count": 26055,
+      "net_long_ratio": 0.24360007676069853,
+      "net_short_ratio": 0.7563999232393015,
+      "net_short": true,
+      "volume_spike": true,
+      "spike_ratio": 3.1045998739760554
+    },
+    "delta_analysis": {
+      "has_curve": true,
+      "slope": "up",
+      "accelerating": true,
+      "red_count": 65848,
+      "green_count": 922,
+      "curve_count": 346
+    },
+    "detected": true,
+    "confidence": 70,
+    "description": "SC（卖出密集区），短期低点，别追空",
+    "risk_warning": "SC形态：短期低点，考虑反弹，不建议追空",
+    "signals": [
+      "价格跌破近期低点（下部区域低点密集）",
+      "净量爆发（做空/做多比=3.10）"
+    ],
+    "action_plan": [
+      "观望，等待价格反弹",
+      "若反弹确认后再考虑做空",
+      "严格止损，不扛单"
+    ]
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "pattern": "sc",
+    "price_analysis": {
+      "current_price_y": 122,
+      "low_edge_count": 21443,
+      "lower_region_ratio": 0.3,
+      "price_position_ratio": 0.19709208400646203
+    },
+    "net_volume_analysis": {
+      "red_count": 5466,
+      "green_count": 10241,
+      "total_count": 15707,
+      "net_long_ratio": 0.3479977080282676,
+      "net_short_ratio": 0.6520022919717323,
+      "net_short": true,
+      "volume_spike": false,
+      "spike_ratio": 1.8732394366197183
+    },
+    "delta_analysis": {
+      "has_curve": true,
+      "slope": "up",
+      "accelerating": true,
+      "red_count": 64999,
+      "green_count": 704,
+      "curve_count": 272
+    },
+    "detected": false,
+    "confidence": 50,
+    "description": "SC（卖出密集区）-未检测到",
+    "risk_warning": null,
+    "signals": [
+      "价格跌破近期低点（下部区域低点密集）",
+      "净量净空（但未达爆发水平）"
+    ],
+    "action_plan": null
+  }
+]

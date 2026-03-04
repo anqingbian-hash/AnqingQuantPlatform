@@ -1,0 +1,30 @@
+{
+  "红色": {
+    "pixel_count": 37451,
+    "percentage": 1.06
+  },
+  "绿色": {
+    "pixel_count": 13028,
+    "percentage": 0.37
+  },
+  "黄色": {
+    "pixel_count": 5774,
+    "percentage": 0.16
+  },
+  "蓝色": {
+    "pixel_count": 137,
+    "percentage": 0.0
+  },
+  "青色": {
+    "pixel_count": 11102,
+    "percentage": 0.31
+  },
+  "白色": {
+    "pixel_count": 44607,
+    "percentage": 1.27
+  },
+  "黑色": {
+    "pixel_count": 3243226,
+    "percentage": 92.0
+  }
+}

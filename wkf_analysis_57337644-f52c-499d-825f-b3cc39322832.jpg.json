@@ -1,0 +1,40 @@
+{
+  "image_path": "/root/.openclaw/media/inbound/57337644-f52c-499d-825f-b3cc39322832.jpg",
+  "image_size": {
+    "width": 2560,
+    "height": 1377
+  },
+  "main_chart": {
+    "support_lines": [],
+    "resistance_lines": [
+      {
+        "x1": 0,
+        "y1": 84,
+        "x2": 2559,
+        "y2": 84,
+        "y": 84,
+        "length": 2559
+      }
+    ]
+  },
+  "sub_chart_1": {
+    "net_long": false,
+    "net_short": true,
+    "red_count": 12109,
+    "green_count": 19268
+  },
+  "sub_chart_2": {
+    "slope": "down",
+    "curve_detected": true,
+    "top_y": 183,
+    "bottom_y": 318,
+    "centroid_y": 252
+  },
+  "analysis_result": {
+    "support_line_count": 0,
+    "resistance_line_count": 1,
+    "net_long": false,
+    "net_short": true,
+    "delta_slope": "down"
+  }
+}

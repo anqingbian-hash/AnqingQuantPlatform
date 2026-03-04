@@ -1,0 +1,29 @@
+{
+  "image_path": "/root/.openclaw/media/inbound/0c4062f0-7feb-4f68-a145-5a36a5d54e1c.jpg",
+  "image_size": {
+    "width": 2560,
+    "height": 1377
+  },
+  "main_chart": {
+    "current_price": null,
+    "support_lines": [],
+    "resistance_lines": [],
+    "annotations": []
+  },
+  "sub_chart_1": {
+    "current_value": null,
+    "is_positive": null,
+    "zero_line_y": null
+  },
+  "sub_chart_2": {
+    "slope": null,
+    "curve_points": [
+      [
+        2093,
+        377
+      ]
+    ],
+    "zero_line_y": null
+  },
+  "summary": {}
+}

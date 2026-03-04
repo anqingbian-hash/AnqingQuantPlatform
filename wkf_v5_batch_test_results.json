@@ -1,0 +1,918 @@
+[
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "period": "周线",
+    "bc_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+      "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+      "pattern": "bc",
+      "price_analysis": {
+        "current_price_y": 122,
+        "high_edge_count": 22989,
+        "upper_region_ratio": 0.3
+      },
+      "net_volume_analysis": {
+        "red_count": 4340,
+        "green_count": 6350,
+        "total_count": 10690,
+        "net_long_ratio": 0.4059869036482694,
+        "net_short_ratio": 0.5940130963517306,
+        "net_long": false,
+        "volume_surge": false,
+        "surge_ratio": 0.6833569516611557
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "accelerating": true,
+        "red_count": 73583,
+        "green_count": 1203,
+        "curve_count": 297
+      },
+      "detected": false,
+      "confidence": 60,
+      "description": "BC（购买高潮）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格突破近期高点（上部区域高点密集）",
+        "DELTA斜率向上并加速（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "sc_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+      "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+      "pattern": "sc",
+      "price_analysis": {
+        "current_price_y": 122,
+        "low_edge_count": 22095,
+        "lower_region_ratio": 0.3,
+        "price_position_ratio": 0.19709208400646203
+      },
+      "net_volume_analysis": {
+        "red_count": 4340,
+        "green_count": 6350,
+        "total_count": 10690,
+        "net_long_ratio": 0.4059869036482694,
+        "net_short_ratio": 0.5940130963517306,
+        "net_short": true,
+        "volume_spike": false,
+        "spike_ratio": 1.4627965906473164
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "accelerating": true,
+        "red_count": 73583,
+        "green_count": 1203,
+        "curve_count": 297
+      },
+      "detected": false,
+      "confidence": 50,
+      "description": "SC（卖出密集区）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格跌破近期低点（下部区域低点密集）",
+        "净量净空（但未达爆发水平）"
+      ],
+      "action_plan": null
+    },
+    "lps_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+      "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+      "pattern": "lps",
+      "price_analysis": {
+        "support_y": 122,
+        "support_strength": 5100,
+        "current_price_y": 122,
+        "above_support": false,
+        "distance_to_support": 0,
+        "stable_candle_count": 275,
+        "stabilized": true
+      },
+      "net_volume_analysis": {
+        "red_count": 4340,
+        "green_count": 6350,
+        "total_count": 10690,
+        "net_long_ratio": 0.4059869036482694,
+        "net_short_ratio": 0.5940130963517306,
+        "net_long": false,
+        "net_short": true,
+        "net_long_stable": false
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "red_count": 73583,
+        "green_count": 1203,
+        "curve_count": 297,
+        "flat_or_slightly_up": true
+      },
+      "detected": false,
+      "confidence": 40,
+      "description": "LPS（最后的支撑点）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格企稳（但位于S2下方）",
+        "DELTA斜率向上（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "lpsy_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+      "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+      "pattern": "lpsy",
+      "price_analysis": {
+        "resistance_y": 526,
+        "resistance_strength": 9945,
+        "current_price_y": 122,
+        "below_resistance": false,
+        "distance_to_resistance": 404,
+        "consolidation_candle_count": 275,
+        "consolidated": true
+      },
+      "net_volume_analysis": {
+        "red_count": 4340,
+        "green_count": 6350,
+        "total_count": 10690,
+        "net_long_ratio": 0.4059869036482694,
+        "net_short_ratio": 0.5940130963517306,
+        "net_long": false,
+        "net_short": true,
+        "net_short_dominant": true,
+        "turning_from_long_to_short": false
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "red_count": 73583,
+        "green_count": 1203,
+        "curve_count": 297,
+        "flat_or_down": false
+      },
+      "detected": false,
+      "confidence": 50,
+      "description": "LPSY（最后的供应点）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格企稳（但位于R2上方）",
+        "净量净空主导",
+        "DELTA斜率向上（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "patterns_detected": {
+      "bc": false,
+      "sc": false,
+      "lps": false,
+      "lpsy": false
+    },
+    "top_patterns_count": 0,
+    "bottom_patterns_count": 0,
+    "enhanced_signal": "wait",
+    "position_size": 8,
+    "enhancement": "无形态增强，观望，仓位8%"
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/437746cd-65be-4603-938c-85debf232d94.jpg",
+    "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+    "period": "日线",
+    "bc_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/437746cd-65be-4603-938c-85debf232d94.jpg",
+      "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+      "pattern": "bc",
+      "price_analysis": {
+        "current_price_y": 122,
+        "high_edge_count": 22465,
+        "upper_region_ratio": 0.3
+      },
+      "net_volume_analysis": {
+        "red_count": 4137,
+        "green_count": 1123,
+        "total_count": 5260,
+        "net_long_ratio": 0.7865019011406844,
+        "net_short_ratio": 0.2134980988593156,
+        "net_long": true,
+        "volume_surge": true,
+        "surge_ratio": 3.6806049822064058
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "accelerating": true,
+        "red_count": 66645,
+        "green_count": 1031,
+        "curve_count": 357
+      },
+      "detected": true,
+      "confidence": 100,
+      "description": "BC（购买高潮），短期高点，别追多",
+      "risk_warning": "BC形态：短期高点，注意回调，不建议追多",
+      "signals": [
+        "价格突破近期高点（上部区域高点密集）",
+        "净量异常增大（做多/做空比=3.68）",
+        "DELTA斜率向上并加速（动能增强）"
+      ],
+      "action_plan": [
+        "观望，等待价格回调",
+        "若回调确认后再考虑入场",
+        "严格止损，不扛单"
+      ]
+    },
+    "sc_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/437746cd-65be-4603-938c-85debf232d94.jpg",
+      "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+      "pattern": "sc",
+      "price_analysis": {
+        "current_price_y": 122,
+        "low_edge_count": 13522,
+        "lower_region_ratio": 0.3,
+        "price_position_ratio": 0.19709208400646203
+      },
+      "net_volume_analysis": {
+        "red_count": 4137,
+        "green_count": 1123,
+        "total_count": 5260,
+        "net_long_ratio": 0.7865019011406844,
+        "net_short_ratio": 0.2134980988593156,
+        "net_short": false,
+        "volume_spike": false,
+        "spike_ratio": 0.2713871435476075
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "accelerating": true,
+        "red_count": 66645,
+        "green_count": 1031,
+        "curve_count": 357
+      },
+      "detected": false,
+      "confidence": 30,
+      "description": "SC（卖出密集区）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格跌破近期低点（下部区域低点密集）"
+      ],
+      "action_plan": null
+    },
+    "lps_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/437746cd-65be-4603-938c-85debf232d94.jpg",
+      "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+      "pattern": "lps",
+      "price_analysis": {
+        "support_y": 122,
+        "support_strength": 4335,
+        "current_price_y": 122,
+        "above_support": false,
+        "distance_to_support": 0,
+        "stable_candle_count": 275,
+        "stabilized": true
+      },
+      "net_volume_analysis": {
+        "red_count": 4137,
+        "green_count": 1123,
+        "total_count": 5260,
+        "net_long_ratio": 0.7865019011406844,
+        "net_short_ratio": 0.2134980988593156,
+        "net_long": true,
+        "net_short": false,
+        "net_long_stable": true
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "red_count": 66645,
+        "green_count": 1031,
+        "curve_count": 357,
+        "flat_or_slightly_up": true
+      },
+      "detected": true,
+      "confidence": 75,
+      "description": "LPS（最后的支撑点），二买位置，低吸参考",
+      "risk_warning": "LPS形态：二买位置，低吸参考",
+      "signals": [
+        "价格企稳（但位于S2下方）",
+        "净量净多稳定",
+        "DELTA斜率向上（动能增强）"
+      ],
+      "action_plan": [
+        "回踩S2后做多单",
+        "严格止损，不扛单",
+        "若突破失败，立即止损"
+      ]
+    },
+    "lpsy_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/437746cd-65be-4603-938c-85debf232d94.jpg",
+      "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+      "pattern": "lpsy",
+      "price_analysis": {
+        "resistance_y": 477,
+        "resistance_strength": 8415,
+        "current_price_y": 122,
+        "below_resistance": false,
+        "distance_to_resistance": 355,
+        "consolidation_candle_count": 275,
+        "consolidated": true
+      },
+      "net_volume_analysis": {
+        "red_count": 4137,
+        "green_count": 1123,
+        "total_count": 5260,
+        "net_long_ratio": 0.7865019011406844,
+        "net_short_ratio": 0.2134980988593156,
+        "net_long": true,
+        "net_short": false,
+        "net_short_dominant": false,
+        "turning_from_long_to_short": false
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "red_count": 66645,
+        "green_count": 1031,
+        "curve_count": 357,
+        "flat_or_down": false
+      },
+      "detected": false,
+      "confidence": 15,
+      "description": "LPSY（最后的供应点）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格企稳（但位于R2上方）",
+        "DELTA斜率向上（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "patterns_detected": {
+      "bc": true,
+      "sc": false,
+      "lps": true,
+      "lpsy": false
+    },
+    "top_patterns_count": 1,
+    "bottom_patterns_count": 1,
+    "enhanced_signal": "wait",
+    "position_size": 4,
+    "enhancement": "BC形态：短期高点，注意回调，降低仓位到4%"
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "period": "1小时",
+    "bc_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+      "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+      "pattern": "bc",
+      "price_analysis": {
+        "current_price_y": 122,
+        "high_edge_count": 22514,
+        "upper_region_ratio": 0.3
+      },
+      "net_volume_analysis": {
+        "red_count": 5475,
+        "green_count": 12952,
+        "total_count": 18427,
+        "net_long_ratio": 0.29711835892983124,
+        "net_short_ratio": 0.7028816410701688,
+        "net_long": false,
+        "volume_surge": false,
+        "surge_ratio": 0.4226820041689184
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "accelerating": true,
+        "red_count": 74036,
+        "green_count": 1316,
+        "curve_count": 379
+      },
+      "detected": false,
+      "confidence": 60,
+      "description": "BC（购买高潮）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格突破近期高点（上部区域高点密集）",
+        "DELTA斜率向上并加速（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "sc_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+      "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+      "pattern": "sc",
+      "price_analysis": {
+        "current_price_y": 122,
+        "low_edge_count": 25743,
+        "lower_region_ratio": 0.3,
+        "price_position_ratio": 0.19709208400646203
+      },
+      "net_volume_analysis": {
+        "red_count": 5475,
+        "green_count": 12952,
+        "total_count": 18427,
+        "net_long_ratio": 0.29711835892983124,
+        "net_short_ratio": 0.7028816410701688,
+        "net_short": true,
+        "volume_spike": true,
+        "spike_ratio": 2.365230094959825
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "accelerating": true,
+        "red_count": 74036,
+        "green_count": 1316,
+        "curve_count": 379
+      },
+      "detected": true,
+      "confidence": 70,
+      "description": "SC（卖出密集区），短期低点，别追空",
+      "risk_warning": "SC形态：短期低点，考虑反弹，不建议追空",
+      "signals": [
+        "价格跌破近期低点（下部区域低点密集）",
+        "净量爆发（做空/做多比=2.37）"
+      ],
+      "action_plan": [
+        "观望，等待价格反弹",
+        "若反弹确认后再考虑做空",
+        "严格止损，不扛单"
+      ]
+    },
+    "lps_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+      "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+      "pattern": "lps",
+      "price_analysis": {
+        "support_y": 122,
+        "support_strength": 4335,
+        "current_price_y": 122,
+        "above_support": false,
+        "distance_to_support": 0,
+        "stable_candle_count": 275,
+        "stabilized": true
+      },
+      "net_volume_analysis": {
+        "red_count": 5475,
+        "green_count": 12952,
+        "total_count": 18427,
+        "net_long_ratio": 0.29711835892983124,
+        "net_short_ratio": 0.7028816410701688,
+        "net_long": false,
+        "net_short": true,
+        "net_long_stable": false
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "red_count": 74036,
+        "green_count": 1316,
+        "curve_count": 379,
+        "flat_or_slightly_up": true
+      },
+      "detected": false,
+      "confidence": 40,
+      "description": "LPS（最后的支撑点）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格企稳（但位于S2下方）",
+        "DELTA斜率向上（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "lpsy_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+      "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+      "pattern": "lpsy",
+      "price_analysis": {
+        "resistance_y": 502,
+        "resistance_strength": 9180,
+        "current_price_y": 122,
+        "below_resistance": false,
+        "distance_to_resistance": 380,
+        "consolidation_candle_count": 275,
+        "consolidated": true
+      },
+      "net_volume_analysis": {
+        "red_count": 5475,
+        "green_count": 12952,
+        "total_count": 18427,
+        "net_long_ratio": 0.29711835892983124,
+        "net_short_ratio": 0.7028816410701688,
+        "net_long": false,
+        "net_short": true,
+        "net_short_dominant": true,
+        "turning_from_long_to_short": false
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "red_count": 74036,
+        "green_count": 1316,
+        "curve_count": 379,
+        "flat_or_down": false
+      },
+      "detected": false,
+      "confidence": 50,
+      "description": "LPSY（最后的供应点）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格企稳（但位于R2上方）",
+        "净量净空主导",
+        "DELTA斜率向上（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "patterns_detected": {
+      "bc": false,
+      "sc": true,
+      "lps": false,
+      "lpsy": false
+    },
+    "top_patterns_count": 0,
+    "bottom_patterns_count": 1,
+    "enhanced_signal": "wait",
+    "position_size": 6,
+    "enhancement": "SC形态：短期低点，考虑反弹，仓位6%"
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "period": "15分钟",
+    "bc_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+      "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+      "pattern": "bc",
+      "price_analysis": {
+        "current_price_y": 122,
+        "high_edge_count": 22375,
+        "upper_region_ratio": 0.3
+      },
+      "net_volume_analysis": {
+        "red_count": 6347,
+        "green_count": 19708,
+        "total_count": 26055,
+        "net_long_ratio": 0.24360007676069853,
+        "net_short_ratio": 0.7563999232393015,
+        "net_long": false,
+        "volume_surge": false,
+        "surge_ratio": 0.3220356182454716
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "accelerating": true,
+        "red_count": 65848,
+        "green_count": 922,
+        "curve_count": 346
+      },
+      "detected": false,
+      "confidence": 60,
+      "description": "BC（购买高潮）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格突破近期高点（上部区域高点密集）",
+        "DELTA斜率向上并加速（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "sc_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+      "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+      "pattern": "sc",
+      "price_analysis": {
+        "current_price_y": 122,
+        "low_edge_count": 25559,
+        "lower_region_ratio": 0.3,
+        "price_position_ratio": 0.19709208400646203
+      },
+      "net_volume_analysis": {
+        "red_count": 6347,
+        "green_count": 19708,
+        "total_count": 26055,
+        "net_long_ratio": 0.24360007676069853,
+        "net_short_ratio": 0.7563999232393015,
+        "net_short": true,
+        "volume_spike": true,
+        "spike_ratio": 3.1045998739760554
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "accelerating": true,
+        "red_count": 65848,
+        "green_count": 922,
+        "curve_count": 346
+      },
+      "detected": true,
+      "confidence": 70,
+      "description": "SC（卖出密集区），短期低点，别追空",
+      "risk_warning": "SC形态：短期低点，考虑反弹，不建议追空",
+      "signals": [
+        "价格跌破近期低点（下部区域低点密集）",
+        "净量爆发（做空/做多比=3.10）"
+      ],
+      "action_plan": [
+        "观望，等待价格反弹",
+        "若反弹确认后再考虑做空",
+        "严格止损，不扛单"
+      ]
+    },
+    "lps_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+      "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+      "pattern": "lps",
+      "price_analysis": {
+        "support_y": 122,
+        "support_strength": 4335,
+        "current_price_y": 122,
+        "above_support": false,
+        "distance_to_support": 0,
+        "stable_candle_count": 275,
+        "stabilized": true
+      },
+      "net_volume_analysis": {
+        "red_count": 6347,
+        "green_count": 19708,
+        "total_count": 26055,
+        "net_long_ratio": 0.24360007676069853,
+        "net_short_ratio": 0.7563999232393015,
+        "net_long": false,
+        "net_short": true,
+        "net_long_stable": false
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "red_count": 65848,
+        "green_count": 922,
+        "curve_count": 346,
+        "flat_or_slightly_up": true
+      },
+      "detected": false,
+      "confidence": 40,
+      "description": "LPS（最后的支撑点）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格企稳（但位于S2下方）",
+        "DELTA斜率向上（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "lpsy_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+      "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+      "pattern": "lpsy",
+      "price_analysis": {
+        "resistance_y": 543,
+        "resistance_strength": 12240,
+        "current_price_y": 122,
+        "below_resistance": false,
+        "distance_to_resistance": 421,
+        "consolidation_candle_count": 275,
+        "consolidated": true
+      },
+      "net_volume_analysis": {
+        "red_count": 6347,
+        "green_count": 19708,
+        "total_count": 26055,
+        "net_long_ratio": 0.24360007676069853,
+        "net_short_ratio": 0.7563999232393015,
+        "net_long": false,
+        "net_short": true,
+        "net_short_dominant": true,
+        "turning_from_long_to_short": false
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "red_count": 65848,
+        "green_count": 922,
+        "curve_count": 346,
+        "flat_or_down": false
+      },
+      "detected": false,
+      "confidence": 50,
+      "description": "LPSY（最后的供应点）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格企稳（但位于R2上方）",
+        "净量净空主导",
+        "DELTA斜率向上（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "patterns_detected": {
+      "bc": false,
+      "sc": true,
+      "lps": false,
+      "lpsy": false
+    },
+    "top_patterns_count": 0,
+    "bottom_patterns_count": 1,
+    "enhanced_signal": "wait",
+    "position_size": 6,
+    "enhancement": "SC形态：短期低点，考虑反弹，仓位6%"
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "period": "5分钟",
+    "bc_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+      "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+      "pattern": "bc",
+      "price_analysis": {
+        "current_price_y": 122,
+        "high_edge_count": 22465,
+        "upper_region_ratio": 0.3
+      },
+      "net_volume_analysis": {
+        "red_count": 5466,
+        "green_count": 10241,
+        "total_count": 15707,
+        "net_long_ratio": 0.3479977080282676,
+        "net_short_ratio": 0.6520022919717323,
+        "net_long": false,
+        "volume_surge": false,
+        "surge_ratio": 0.533684827182191
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "accelerating": true,
+        "red_count": 64999,
+        "green_count": 704,
+        "curve_count": 272
+      },
+      "detected": false,
+      "confidence": 60,
+      "description": "BC（购买高潮）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格突破近期高点（上部区域高点密集）",
+        "DELTA斜率向上并加速（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "sc_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+      "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+      "pattern": "sc",
+      "price_analysis": {
+        "current_price_y": 122,
+        "low_edge_count": 21443,
+        "lower_region_ratio": 0.3,
+        "price_position_ratio": 0.19709208400646203
+      },
+      "net_volume_analysis": {
+        "red_count": 5466,
+        "green_count": 10241,
+        "total_count": 15707,
+        "net_long_ratio": 0.3479977080282676,
+        "net_short_ratio": 0.6520022919717323,
+        "net_short": true,
+        "volume_spike": false,
+        "spike_ratio": 1.8732394366197183
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "accelerating": true,
+        "red_count": 64999,
+        "green_count": 704,
+        "curve_count": 272
+      },
+      "detected": false,
+      "confidence": 50,
+      "description": "SC（卖出密集区）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格跌破近期低点（下部区域低点密集）",
+        "净量净空（但未达爆发水平）"
+      ],
+      "action_plan": null
+    },
+    "lps_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+      "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+      "pattern": "lps",
+      "price_analysis": {
+        "support_y": 122,
+        "support_strength": 4335,
+        "current_price_y": 122,
+        "above_support": false,
+        "distance_to_support": 0,
+        "stable_candle_count": 275,
+        "stabilized": true
+      },
+      "net_volume_analysis": {
+        "red_count": 5466,
+        "green_count": 10241,
+        "total_count": 15707,
+        "net_long_ratio": 0.3479977080282676,
+        "net_short_ratio": 0.6520022919717323,
+        "net_long": false,
+        "net_short": true,
+        "net_long_stable": false
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "red_count": 64999,
+        "green_count": 704,
+        "curve_count": 272,
+        "flat_or_slightly_up": true
+      },
+      "detected": false,
+      "confidence": 40,
+      "description": "LPS（最后的支撑点）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格企稳（但位于S2下方）",
+        "DELTA斜率向上（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "lpsy_pattern": {
+      "success": true,
+      "image_path": "/root/.openclaw/media/inbound/6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+      "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+      "pattern": "lpsy",
+      "price_analysis": {
+        "resistance_y": 253,
+        "resistance_strength": 8160,
+        "current_price_y": 122,
+        "below_resistance": false,
+        "distance_to_resistance": 131,
+        "consolidation_candle_count": 275,
+        "consolidated": true
+      },
+      "net_volume_analysis": {
+        "red_count": 5466,
+        "green_count": 10241,
+        "total_count": 15707,
+        "net_long_ratio": 0.3479977080282676,
+        "net_short_ratio": 0.6520022919717323,
+        "net_long": false,
+        "net_short": true,
+        "net_short_dominant": true,
+        "turning_from_long_to_short": false
+      },
+      "delta_analysis": {
+        "has_curve": true,
+        "slope": "up",
+        "red_count": 64999,
+        "green_count": 704,
+        "curve_count": 272,
+        "flat_or_down": false
+      },
+      "detected": false,
+      "confidence": 50,
+      "description": "LPSY（最后的供应点）-未检测到",
+      "risk_warning": null,
+      "signals": [
+        "价格企稳（但位于R2上方）",
+        "净量净空主导",
+        "DELTA斜率向上（动能增强）"
+      ],
+      "action_plan": null
+    },
+    "patterns_detected": {
+      "bc": false,
+      "sc": false,
+      "lps": false,
+      "lpsy": false
+    },
+    "top_patterns_count": 0,
+    "bottom_patterns_count": 0,
+    "enhanced_signal": "wait",
+    "position_size": 8,
+    "enhancement": "无形态增强，观望，仓位8%"
+  }
+]

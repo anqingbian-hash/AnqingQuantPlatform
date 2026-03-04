@@ -1,0 +1,46 @@
+{
+  "000001": {
+    "code": "000001",
+    "name": "平安银行",
+    "sector": "银行",
+    "price": 10.88,
+    "change_pct": 0.2765,
+    "data_source": "tushare_pro",
+    "source": "Tushare Pro API",
+    "query_time": "2026-03-04T08:34:48.965801",
+    "cache_time": "2026-03-04T08:34:48.966835"
+  },
+  "600519": {
+    "code": "600519",
+    "name": "贵州茅台",
+    "sector": "白酒",
+    "price": 1426.19,
+    "change_pct": -0.9666,
+    "data_source": "tushare_pro",
+    "source": "Tushare Pro API",
+    "query_time": "2026-03-04T08:34:51.203396",
+    "cache_time": "2026-03-04T08:34:51.204341"
+  },
+  "002496": {
+    "code": "002496",
+    "name": "*ST辉丰",
+    "sector": "农药化肥",
+    "price": 1.89,
+    "change_pct": -3.0769,
+    "data_source": "tushare_pro",
+    "source": "Tushare Pro API",
+    "query_time": "2026-03-04T08:34:53.216621",
+    "cache_time": "2026-03-04T08:34:53.217057"
+  },
+  "603019": {
+    "code": "603019",
+    "name": "中科曙光",
+    "sector": "IT设备",
+    "price": 83.28,
+    "change_pct": -7.927,
+    "data_source": "tushare_pro",
+    "source": "Tushare Pro API",
+    "query_time": "2026-03-04T08:34:55.052657",
+    "cache_time": "2026-03-04T08:34:55.052978"
+  }
+}

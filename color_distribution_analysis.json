@@ -1,0 +1,49 @@
+{
+  "image_path": "/root/.openclaw/media/inbound/57337644-f52c-499d-825f-b3cc39322832.jpg",
+  "color_distribution": {
+    "红色范围1（标准)": {
+      "pixel_count": 32108,
+      "percentage": 0.91
+    },
+    "红色范围2（暗红)": {
+      "pixel_count": 44891,
+      "percentage": 1.27
+    },
+    "红色范围3（淡红)": {
+      "pixel_count": 45774,
+      "percentage": 1.3
+    },
+    "绿色范围1（标准)": {
+      "pixel_count": 22845,
+      "percentage": 0.65
+    },
+    "绿色范围2（暗绿)": {
+      "pixel_count": 31535,
+      "percentage": 0.89
+    },
+    "黄色范围1（标准)": {
+      "pixel_count": 18838,
+      "percentage": 0.53
+    },
+    "黄色范围2（淡黄)": {
+      "pixel_count": 56544,
+      "percentage": 1.6
+    },
+    "黄色范围3（宽黄)": {
+      "pixel_count": 74350,
+      "percentage": 2.11
+    },
+    "白色范围（零轴)": {
+      "pixel_count": 79111,
+      "percentage": 2.24
+    },
+    "黑色范围（背景)": {
+      "pixel_count": 3172522,
+      "percentage": 90.0
+    },
+    "淡紫色范围（阻力线）": {
+      "pixel_count": 42529,
+      "percentage": 1.21
+    }
+  }
+}

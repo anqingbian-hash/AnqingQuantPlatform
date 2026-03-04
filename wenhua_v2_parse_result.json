@@ -1,0 +1,49 @@
+{
+  "image_path": "/root/.openclaw/media/inbound/0c4062f0-7feb-4f68-a145-5a36a5d54e1c.jpg",
+  "image_size": {
+    "width": 2560,
+    "height": 1377
+  },
+  "main_chart": {
+    "support_lines": [],
+    "resistance_lines": [
+      {
+        "y": 490,
+        "price": null,
+        "line": {
+          "x1": 1411,
+          "y1": 490,
+          "x2": 2122,
+          "y2": 490,
+          "y": 490,
+          "length": 711
+        }
+      },
+      {
+        "y": 519,
+        "price": null,
+        "line": {
+          "x1": 105,
+          "y1": 519,
+          "x2": 2558,
+          "y2": 519,
+          "y": 519,
+          "length": 2453
+        }
+      }
+    ],
+    "annotations": []
+  },
+  "sub_chart_1": {
+    "value": null,
+    "is_positive": null,
+    "text": "1 - 7 ."
+  },
+  "sub_chart_2": {
+    "slope": "flat",
+    "curve_detected": true
+  },
+  "summary": {
+    "delta_slope": "flat"
+  }
+}

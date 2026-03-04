@@ -1,0 +1,267 @@
+[
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "period": "weekly",
+    "sr_lines": {
+      "support_lines": [],
+      "resistance_lines": [],
+      "support_count": 0,
+      "resistance_count": 0
+    },
+    "sr_prices": {
+      "r2_y": null,
+      "r2_price": null,
+      "s2_y": null,
+      "s2_price": null,
+      "current_y": 122,
+      "current_price": 17.12005
+    },
+    "current_price": {
+      "y": 122,
+      "detected": true
+    },
+    "net_volume": {
+      "red_count": 4340,
+      "green_count": 16,
+      "net_long": true,
+      "net_short": false
+    },
+    "delta": {
+      "slope": "up",
+      "has_curve": true,
+      "red_count": 73583,
+      "green_count": 955
+    },
+    "wkf_judgment": {
+      "phase": "markup",
+      "confidence": 80,
+      "signal": "long"
+    },
+    "recommendations": {
+      "trading_signal": "long",
+      "position_size": 12,
+      "risk_level": "medium",
+      "risk_warning": [
+        "止损位设为最近S2支撑线下方，跌破无条件离场"
+      ],
+      "action_plan": [
+        "等待回踩后做多单",
+        "严格止损，不扛单"
+      ]
+    }
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/437746cd-65be-4603-938c-85debf232d94.jpg",
+    "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+    "period": "daily",
+    "sr_lines": {
+      "support_lines": [],
+      "resistance_lines": [],
+      "support_count": 0,
+      "resistance_count": 0
+    },
+    "sr_prices": {
+      "r2_y": null,
+      "r2_price": null,
+      "s2_y": null,
+      "s2_price": null,
+      "current_y": 122,
+      "current_price": 16.799968
+    },
+    "current_price": {
+      "y": 122,
+      "detected": true
+    },
+    "net_volume": {
+      "red_count": 4137,
+      "green_count": 219,
+      "net_long": true,
+      "net_short": false
+    },
+    "delta": {
+      "slope": "up",
+      "has_curve": true,
+      "red_count": 66645,
+      "green_count": 853
+    },
+    "wkf_judgment": {
+      "phase": "markup",
+      "confidence": 80,
+      "signal": "long"
+    },
+    "recommendations": {
+      "trading_signal": "long",
+      "position_size": 12,
+      "risk_level": "medium",
+      "risk_warning": [
+        "止损位设为最近S2支撑线下方，跌破无条件离场"
+      ],
+      "action_plan": [
+        "等待回踩后做多单",
+        "严格止损，不扛单"
+      ]
+    }
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "period": "hourly",
+    "sr_lines": {
+      "support_lines": [],
+      "resistance_lines": [],
+      "support_count": 0,
+      "resistance_count": 0
+    },
+    "sr_prices": {
+      "r2_y": null,
+      "r2_price": null,
+      "s2_y": null,
+      "s2_price": null,
+      "current_y": 122,
+      "current_price": 17.120002
+    },
+    "current_price": {
+      "y": 122,
+      "detected": true
+    },
+    "net_volume": {
+      "red_count": 5475,
+      "green_count": 290,
+      "net_long": true,
+      "net_short": false
+    },
+    "delta": {
+      "slope": "up",
+      "has_curve": true,
+      "red_count": 74036,
+      "green_count": 1098
+    },
+    "wkf_judgment": {
+      "phase": "markup",
+      "confidence": 80,
+      "signal": "long"
+    },
+    "recommendations": {
+      "trading_signal": "long",
+      "position_size": 12,
+      "risk_level": "medium",
+      "risk_warning": [
+        "止损位设为最近S2支撑线下方，跌破无条件离场"
+      ],
+      "action_plan": [
+        "等待回踩后做多单",
+        "严格止损，不扛单"
+      ]
+    }
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "period": "15min",
+    "sr_lines": {
+      "support_lines": [],
+      "resistance_lines": [],
+      "support_count": 0,
+      "resistance_count": 0
+    },
+    "sr_prices": {
+      "r2_y": null,
+      "r2_price": null,
+      "s2_y": null,
+      "s2_price": null,
+      "current_y": 122,
+      "current_price": 17.659978000000002
+    },
+    "current_price": {
+      "y": 122,
+      "detected": true
+    },
+    "net_volume": {
+      "red_count": 6347,
+      "green_count": 3,
+      "net_long": true,
+      "net_short": false
+    },
+    "delta": {
+      "slope": "up",
+      "has_curve": true,
+      "red_count": 65848,
+      "green_count": 739
+    },
+    "wkf_judgment": {
+      "phase": "markup",
+      "confidence": 80,
+      "signal": "long"
+    },
+    "recommendations": {
+      "trading_signal": "long",
+      "position_size": 12,
+      "risk_level": "medium",
+      "risk_warning": [
+        "止损位设为最近S2支撑线下方，跌破无条件离场"
+      ],
+      "action_plan": [
+        "等待回踩后做多单",
+        "严格止损，不扛单"
+      ]
+    }
+  },
+  {
+    "success": true,
+    "image_path": "/root/.openclaw/media/inbound/6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "period": "5min",
+    "sr_lines": {
+      "support_lines": [],
+      "resistance_lines": [],
+      "support_count": 0,
+      "resistance_count": 0
+    },
+    "sr_prices": {
+      "r2_y": null,
+      "r2_price": null,
+      "s2_y": null,
+      "s2_price": null,
+      "current_y": 122,
+      "current_price": 17.939947
+    },
+    "current_price": {
+      "y": 122,
+      "detected": true
+    },
+    "net_volume": {
+      "red_count": 5466,
+      "green_count": 294,
+      "net_long": true,
+      "net_short": false
+    },
+    "delta": {
+      "slope": "up",
+      "has_curve": true,
+      "red_count": 64999,
+      "green_count": 513
+    },
+    "wkf_judgment": {
+      "phase": "markup",
+      "confidence": 80,
+      "signal": "long"
+    },
+    "recommendations": {
+      "trading_signal": "long",
+      "position_size": 12,
+      "risk_level": "medium",
+      "risk_warning": [
+        "止损位设为最近S2支撑线下方，跌破无条件离场"
+      ],
+      "action_plan": [
+        "等待回踩后做多单",
+        "严格止损，不扛单"
+      ]
+    }
+  }
+]

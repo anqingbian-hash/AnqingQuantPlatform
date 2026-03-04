@@ -1,0 +1,78 @@
+[
+  {
+    "period": "周线",
+    "image_name": "9c5927d6-a315-4f12-9768-a9a2941aacfc.jpg",
+    "success": true,
+    "detected": false,
+    "edge_count": 60276,
+    "lines_detected": 278,
+    "valid_horizontal_lines": 288,
+    "color_clusters": {
+      "black": 10,
+      "colorful": 278
+    },
+    "r2_candidates": 0,
+    "r2_line": null
+  },
+  {
+    "period": "日线",
+    "image_name": "437746cd-65be-4603-938c-85debf232d94.jpg",
+    "success": true,
+    "detected": false,
+    "edge_count": 66086,
+    "lines_detected": 10,
+    "valid_horizontal_lines": 350,
+    "color_clusters": {
+      "colorful": 340,
+      "black": 10
+    },
+    "r2_candidates": 0,
+    "r2_line": null
+  },
+  {
+    "period": "1小时",
+    "image_name": "19397363-b6cd-4344-93cc-870d7d872a83.jpg",
+    "success": true,
+    "detected": false,
+    "edge_count": 64357,
+    "lines_detected": 6,
+    "valid_horizontal_lines": 270,
+    "color_clusters": {
+      "colorful": 264,
+      "black": 6
+    },
+    "r2_candidates": 0,
+    "r2_line": null
+  },
+  {
+    "period": "15分钟",
+    "image_name": "7ce8ed01-8ac5-45c4-945c-e3b82dda8fe2.jpg",
+    "success": true,
+    "detected": false,
+    "edge_count": 62459,
+    "lines_detected": 12,
+    "valid_horizontal_lines": 298,
+    "color_clusters": {
+      "colorful": 286,
+      "black": 12
+    },
+    "r2_candidates": 0,
+    "r2_line": null
+  },
+  {
+    "period": "5分钟",
+    "image_name": "6f492e6b-7b20-4356-b939-5b17422dadf2.jpg",
+    "success": true,
+    "detected": false,
+    "edge_count": 65066,
+    "lines_detected": 1,
+    "valid_horizontal_lines": 325,
+    "color_clusters": {
+      "colorful": 314,
+      "black": 10,
+      "dark_gray": 1
+    },
+    "r2_candidates": 0,
+    "r2_line": null
+  }
+]

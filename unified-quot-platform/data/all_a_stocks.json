@@ -1,0 +1,79 @@
+[
+  {
+    "code": "000001",
+    "name": "平安银行",
+    "sector": "银行",
+    "price": 12.45,
+    "change_pct": -0.24
+  },
+  {
+    "code": "000002",
+    "name": "万科A",
+    "sector": "房地产",
+    "price": 8.67,
+    "change_pct": -1.14
+  },
+  {
+    "code": "000858",
+    "name": "五粮液",
+    "sector": "白酒",
+    "price": 158.32,
+    "change_pct": -0.45
+  },
+  {
+    "code": "002496",
+    "name": "*ST辉丰",
+    "sector": "农化制品",
+    "price": 1.89,
+    "change_pct": -2.07
+  },
+  {
+    "code": "002594",
+    "name": "比亚迪",
+    "sector": "新能源汽车",
+    "price": 198.5,
+    "change_pct": 1.23
+  },
+  {
+    "code": "300750",
+    "name": "宁德时代",
+    "sector": "电池",
+    "price": 340.22,
+    "change_pct": 2.35
+  },
+  {
+    "code": "600000",
+    "name": "浦发银行",
+    "sector": "银行",
+    "price": 6.78,
+    "change_pct": -0.29
+  },
+  {
+    "code": "600036",
+    "name": "招商银行",
+    "sector": "银行",
+    "price": 28.9,
+    "change_pct": 0.35
+  },
+  {
+    "code": "600519",
+    "name": "贵州茅台",
+    "sector": "白酒",
+    "price": 1440.0,
+    "change_pct": -0.85
+  },
+  {
+    "code": "601318",
+    "name": "中国平安",
+    "sector": "保险",
+    "price": 41.23,
+    "change_pct": -0.72
+  },
+  {
+    "code": "603019",
+    "name": "中科曙光",
+    "sector": "计算机",
+    "price": 35.67,
+    "change_pct": 4.18
+  }
+]
